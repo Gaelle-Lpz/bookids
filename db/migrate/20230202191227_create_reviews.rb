@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
     create_table :reviews do |t|
       t.text :comment
       t.integer :rating
-      t.references :user_book_id, null: false, foreign_key: true
+      t.references :user_book, null: false, foreign_key: true
 
       t.timestamps
     end

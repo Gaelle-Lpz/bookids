@@ -10,9 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_175846) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_02_191402) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "author"
+    t.string "image"
+    t.string "isbn"
+    t.integer "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "families", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "comment"
+    t.integer "rating"
+    t.bigint "user_book_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_book_id"], name: "index_reviews_on_user_book_id"
+  end
+
+  create_table "rewards", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_books", force: :cascade do |t|
+    t.integer "status"
+    t.boolean "wish_validate"
+    t.boolean "read_validate"
+    t.bigint "user_id", null: false
+    t.bigint "book_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_user_books_on_book_id"
+    t.index ["user_id"], name: "index_user_books_on_user_id"
+  end
+
+  create_table "user_reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "reward_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reward_id"], name: "index_user_reviews_on_reward_id"
+    t.index ["user_id"], name: "index_user_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +79,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_175846) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "reviews", "user_books"
+  add_foreign_key "user_books", "books"
+  add_foreign_key "user_books", "users"
+  add_foreign_key "user_reviews", "rewards"
+  add_foreign_key "user_reviews", "users"
 end

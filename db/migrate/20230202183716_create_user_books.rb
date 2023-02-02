@@ -4,8 +4,8 @@ class CreateUserBooks < ActiveRecord::Migration[7.0]
       t.integer :status
       t.boolean :wish_validate
       t.boolean :read_validate
-      t.references :user_id, null: false, foreign_key: true
-      t.references :book_id, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
+      t.references :book, null: false, foreign_key: true
 
       t.timestamps
     end
