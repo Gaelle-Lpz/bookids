@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def reward
+  end
 end
