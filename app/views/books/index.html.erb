@@ -1,8 +1,13 @@
 <h1>Book Index</h1>
+<%= link_to "Reading List", reading_list_books_path %>
 <div class="container">
-  <% @books.each do |book| %>
-    <%= book.name %>
+  <% @reading_list_books.each do |book| %>
+    <p><%= book.name %></p>
   <% end %>
 </div>
-<%= link_to "Reading List", reading_list_books_path %>
 <%= link_to "Wish List", wish_list_books_path %>
+<div class="container">
+  <% @wish_list_books.each do |book| %>
+    <p><%= book.name %></p>
+  <% end %>
+</div>

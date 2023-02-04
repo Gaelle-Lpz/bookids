@@ -1,9 +1,10 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:destroy]
+
   def index
     @books = Book.all
-    @reading_list_books = @books.select { |book| book.user_books.user == current_user && book.user_books.wish_validate }
-    @wish_list_books = @books.select { |book| book.user_books.user == current_user }
+    @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
+    @wish_list_books = current_user.books
   end
 
   def show
@@ -24,11 +25,11 @@ class BooksController < ApplicationController
   end
 
   def reading_list
-    @books = Book.all
+    @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
   end
 
   def wish_list
-    @books = Book.all
+    @wish_list_books = current_user.books
   end
 
   private
@@ -40,4 +41,5 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:name, :description, :author, :image, :isbn, :score)
   end
+
 end
