@@ -3,31 +3,40 @@ puts "Cleaning database..."
 Book.destroy_all
 Review.destroy_all
 Reward.destroy_all
+Family.destroy_all
 User.destroy_all
 UserBook.destroy_all
 UserReward.destroy_all
 
 # Create Families:
 
+family = Family.create(
+  name: "Bookids Family"
+)
+
 # Create User
 user1 = User.create!(
   email: "jessica@lewagon.fr",
-  password: "lewagon"
+  password: "lewagon",
+  family_id: family.id
 )
 
 user2 = User.create!(
   email: "gaelle@lewagon.fr",
-  password: "lewagon"
+  password: "lewagon",
+  family_id: family.id
 )
 
 user3 = User.create!(
   email: "seb@lewagon.fr",
-  password: "lewagon"
+  password: "lewagon",
+  family_id: family.id
 )
 
 user4 = User.create!(
   email: "shaherazade@lewagon.fr",
-  password: "lewagon"
+  password: "lewagon",
+  family_id: family.id
 )
 
 # Create Book
@@ -99,33 +108,108 @@ user_book4 = UserBook.create!(
   wish_validate: true,
   read_validate: false
 )
+user_book5 = UserBook.create!(
+  user_id: user4.id,
+  book_id: book3.id,
+  status: 1,
+  wish_validate: true,
+  read_validate: false
+)
+user_book6 = UserBook.create!(
+  user_id: user4.id,
+  book_id: book2.id,
+  status: 0,
+  wish_validate: true,
+  read_validate: false
+)
+user_book7 = UserBook.create!(
+  user_id: user4.id,
+  book_id: book1.id,
+  status: 2,
+  wish_validate: true,
+  read_validate: false
+)
 
-#user : user1
+#reviews
 
-# #Create reviews:
-# Review.create!(
-#   comment:"Best book ever, makes me wanna be a with and go to Poudlar",
-#   rating:5,
-#   user_book: user_book1
+review1 = Review.create!(
+  comment: "This book is amazing !",
+  rating: 2.0,
+  user_book_id: user_book1.id
+)
 
-# )
+review2 = Review.create!(
+  comment: "Fantastic !",
+  rating: 2.0,
+  user_book_id: user_book2.id
+)
 
-# Review.create!(
-#   comment:"Love this book, but so sad"
-#   rating: 4
+review3 = Review.create!(
+  comment: "Incredible!",
+  rating: 2.0,
+  user_book_id: user_book3.id
+)
 
-# )
+review4 = Review.create!(
+  comment: "Fabulous !",
+  rating: 2.0,
+  user_book_id: user_book4.id
+)
 
-# Review.create!(
-#   comment:"So cool! Wanna be a frog to an jump everywhere"
-#   rating:4
+review5 = Review.create!(
+  comment: "Read it !",
+  rating: 2.0,
+  user_book_id: user_book5.id
+)
 
-# )
+review6 = Review.create!(
+  comment: "Not very good",
+  rating: 2.0,
+  user_book_id: user_book6.id
+)
 
-# Review.create!(
-#   comment:"hard to read, I prefer the movie"
-#   rating: 3
+review7 = Review.create!(
+  comment: "Disaponting ...",
+  rating: 2.0,
+  user_book_id: user_book7.id
+)
 
-# )
+#rewards
 
-# #Create user_book
+reward1 = Reward.create(
+  name: "avatar1"
+)
+
+reward2 = Reward.create(
+  name: "avatar2"
+)
+
+reward3 = Reward.create(
+  name: "avatar3"
+)
+
+reward4 = Reward.create(
+  name: "avatar4"
+)
+
+#user_rewards
+
+user_reward1 = UserReward.create(
+  user_id: user1.id,
+  reward_id: reward1.id
+)
+
+user_reward2 = UserReward.create(
+  user_id: user2.id,
+  reward_id: reward2.id
+)
+
+user_reward3 = UserReward.create(
+  user_id: user3.id,
+  reward_id: reward3.id
+)
+
+user_reward4 = UserReward.create(
+  user_id: user4.id,
+  reward_id: reward4.id
+)
