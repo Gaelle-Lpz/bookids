@@ -1,0 +1,90 @@
+// standard buttons
+
+.btn-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 18px;
+  transition: 0.2s ease-in;
+}
+
+.btn-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 32px;
+  transition: 0.2s ease-in;
+}
+
+// Color buttons
+.btn-orange {
+  background-color: $light-orange;
+  color: $txt-color;
+  border: 1px transparent;
+}
+
+.btn-blue {
+  background-color: $light-blue;
+  color: $txt-color;
+  border: 1px transparent;
+}
+
+.btn-yellow {
+  background-color: $light-yellow;
+  color: $txt-color;
+  border: 1px transparent;
+}
+
+.btn-violet {
+  background-color: $light-violet;
+  color: $txt-color;
+  border: 1px transparent;
+}
+
+.btn-green {
+  background-color: $light-green;
+  color: $txt-color;
+  border: 2px transparent;
+}
+
+// Hover buttons
+
+.btn-orange:hover {
+  background-color: $light-orange-hover;
+  border: 2px solid $light-orange;
+  color: $gray;
+}
+
+.btn-blue:hover {
+  background-color: $light-blue-hover;
+  border: 2px solid $light-blue;
+  color: $gray;
+}
+
+.btn-yellow:hover {
+  background-color: $light-yellow-hover;
+  border: 2px solid $light-yellow;
+  color: $gray;
+}
+
+.btn-violet:hover {
+  background-color: $light-violet-hover;
+  border: 2px solid $light-violet;
+  color: $gray;
+}
+
+.btn-green:hover {
+  background-color: $light-green-hover;
+  border: 2px solid $light-green;
+  color: $gray;
+}
