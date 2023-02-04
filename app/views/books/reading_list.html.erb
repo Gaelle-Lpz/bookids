@@ -1,1 +1,6 @@
 <h1>Reading List</h1>
+<div class="container">
+  <% @reading_list_books.each do |book| %>
+    <p><%= book.name %></p>
+  <% end %>
+</div>
