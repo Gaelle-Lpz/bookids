@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
   resources :books
-  get "reading_list", to: "books#reading_list"
+  get "books/reading_list", to: "books#reading_list"
   get "rewards", to: "pages#rewards"
-  get "add_to_wish_list", to: "books#add_to_wish_list"
+  get "books/:id/add_to_wish_list", to: "books#add_to_wish_list"
 end
