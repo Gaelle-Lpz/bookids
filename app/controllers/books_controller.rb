@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:destroy]
+  before_action :set_book, only: [:show, :destroy]
   def index
     @books = Book.all
     @reading_list_books = @books.select { |book| book.user_books.user == current_user && book.user_books.wish_validate }
