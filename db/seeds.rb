@@ -115,6 +115,7 @@ user_book5 = UserBook.create!(
   wish_validate: true,
   read_validate: false
 )
+#wish_list books
 user_book6 = UserBook.create!(
   user_id: user4.id,
   book_id: book2.id,

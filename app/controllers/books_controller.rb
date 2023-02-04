@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :destroy]
   def index
     @books = Book.all
+    #define wish list and reading list
     @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
     @wish_list_books = current_user.user_books.where(wish_validate: false).map{ |user_book| user_book.book }
   end
