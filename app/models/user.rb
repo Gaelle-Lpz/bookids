@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   belongs_to :family
-  has_many :families
   has_many :user_books
   has_many :books, through: :user_books
   has_many :user_rewards
