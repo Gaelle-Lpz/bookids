@@ -2,12 +2,12 @@
 <%= link_to "Reading List", reading_list_books_path %>
 <div class="container">
   <% @reading_list_books.each do |book| %>
-    <p><%= book.name %></p>
+    <p><%= link_to "#{book.name}", book_path(book) %></p>
   <% end %>
 </div>
 <%= link_to "Wish List", wish_list_books_path %>
 <div class="container">
   <% @wish_list_books.each do |book| %>
-    <p><%= book.name %></p>
+    <p><%= link_to "#{book.name}", book_path(book) %></p>
   <% end %>
 </div>
