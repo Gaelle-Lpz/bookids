@@ -178,19 +178,68 @@ review7 = Review.create!(
 #rewards
 
 reward1 = Reward.create(
-  name: "avatar1"
+  name: "avatar1",
+  image: "https://cdn-icons-png.flaticon.com/512/4330/4330500.png"
 )
 
 reward2 = Reward.create(
-  name: "avatar2"
+  name: "avatar2",
+  image: "https://cdn-icons-png.flaticon.com/512/4330/4330779.png"
 )
 
 reward3 = Reward.create(
-  name: "avatar3"
+  name: "avatar3",
+  image: "https://cdn-icons-png.flaticon.com/512/728/728880.png"
 )
 
 reward4 = Reward.create(
-  name: "avatar4"
+  name: "avatar4",
+  image: "https://cdn-icons-png.flaticon.com/512/4474/4474981.png"
+)
+
+reward5 = Reward.create(
+  name: "avatar5",
+  image: "https://cdn-icons-png.flaticon.com/512/4475/4475009.png"
+)
+
+reward6 = Reward.create(
+  name: "avatar6",
+  image: "https://cdn-icons-png.flaticon.com/512/2119/2119279.png"
+)
+
+reward7 = Reward.create(
+  name: "avatar7",
+  image: "https://cdn-icons-png.flaticon.com/512/2119/2119228.png"
+)
+
+reward8 = Reward.create(
+  name: "avatar8",
+  image: "https://cdn-icons-png.flaticon.com/512/3281/3281202.png"
+)
+
+reward9 = Reward.create(
+  name: "avatar9",
+  image: "https://cdn-icons-png.flaticon.com/512/3281/3281606.png"
+)
+
+reward10 = Reward.create(
+  name: "avatar10",
+  image: "https://cdn-icons-png.flaticon.com/512/5169/5169265.png"
+)
+
+reward11 = Reward.create(
+  name: "avatar11",
+  image: "https://cdn-icons-png.flaticon.com/512/5169/5169269.png"
+)
+
+reward12 = Reward.create(
+  name: "avatar12",
+  image: "https://cdn-icons-png.flaticon.com/512/2602/2602982.png"
+)
+
+reward13 = Reward.create(
+  name: "avatar13",
+  image: "https://cdn-icons-png.flaticon.com/512/2603/2603009.png"
 )
 
 #user_rewards
