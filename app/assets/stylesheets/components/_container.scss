@@ -39,9 +39,21 @@
 
 .container-book {
   width: 100%;
+  border: 2px solid $bg-color;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 24px;
 }
 
 .txt-book {
   text-decoration: none;
   color: $txt-color;
+  font-size: 24px;
+}
+
+.txt-book:hover {
+  color: $bg-color;
 }
