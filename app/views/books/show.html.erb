@@ -12,6 +12,7 @@
 </div>
 <div>
 <p> <%= link_to "Back to book lists", books_path(@book) %></p>
+<p> <%= button_to "Wished Books", book_user_books_path(@book), method: :post %></p>
 </div>
 <div>
 
