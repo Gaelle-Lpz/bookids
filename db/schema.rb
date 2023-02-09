@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_05_102146) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_09_183516) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_05_102146) do
   end
 
   create_table "user_books", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 0
     t.boolean "wish_validate"
     t.boolean "read_validate"
     t.bigint "user_id", null: false
