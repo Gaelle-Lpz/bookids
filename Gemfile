@@ -78,3 +78,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "googlebooks"
+
+#Search
+gem "pg_search"
