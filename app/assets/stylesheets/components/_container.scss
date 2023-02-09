@@ -1,0 +1,37 @@
+.container-margin-left {
+  margin-left: 200px;
+}
+
+.show-top {
+  display: flex;
+  margin-top: 45px;
+}
+
+.show-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.show-left .icon-back {
+  position: absolute;
+  top: 0px;
+  left: 32px;
+}
+
+.show-right {
+  width: 50%;
+  text-align: center;
+}
+
+.show-right .el-center {
+  margin: auto;
+}
+
+.show-element {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
