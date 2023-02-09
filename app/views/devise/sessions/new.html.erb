@@ -2,7 +2,7 @@
   	<div class="container-form5">
 		<div class="container-form4">
     <div class="title-form-log">Bookids login</div>
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
@@ -22,4 +22,4 @@
 </div>
 		</div>
     	</div>
-	</section>
+</section>
