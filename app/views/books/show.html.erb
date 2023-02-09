@@ -1,28 +1,65 @@
-<div class =container >
-<div>
-<h1>My Books</h1>
-<h2><%= @book.name %></h2>
-</div>
-<div class = container>
-<h3>Description:</h3><p><%= @book.description %></p>
-<h3>Author:</h3><p><%= @book.author %></p>
-<h3></h3><p><<%= image_tag @book.image %></p>
-<h3>ISBN:</h3><p><%= @book.isbn %></p>
-<h3>Score:</h3></h2><p><%= @book.score %></p>
-</div>
-<div>
-<p> <%= link_to "Back to book lists", books_path(@book) %></p>
-<p> <%= button_to "Wished Books", book_user_books_path(@book), method: :post %></p>
-</div>
-<div>
+<div class="container container-margin-left">
 
-<div>
-<p><strong>Reviews</strong></p>
-<ul class="list-group">
-  <% @book.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.comment %></li>
-    <li class="list-group-item"><%= review.rating %></li>
-  <% end %>
-</ul>
-<br>
+  <div class="show-top">
+    <!----------------- LEFT ---------------->
+    <div class="show-left">
+
+
+      <%= link_to books_path do %>
+        <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+      <% end %>
+
+      <!-- TODO Change this to average rating book
+      <%# 5.times do |i| %>
+        <%# if i < @review.rating.floor %>
+          <i class="fas fa-star"></i>
+        <%# else %>
+          <i class="far fa-star"></i>
+        <%# end %>
+      <%# end %>
+      -->
+
+      <%= image_tag @book.image, class:"img-book" %>
+
+      <div>
+        <h3>ISBN:</h3>
+        <p class="bg-small bg-yellow"><%= @book.isbn %></p>
+      </div>
+
+    </div>
+    <!----------------- RIGHT ---------------->
+    <div class="show-right">
+
+      <p class="bg-big bg-blue el-center mb-5"><%= @book.name %></p>
+      <div class="show-element">
+        <div>
+          <h3>AUTHOR:</h3>
+          <p class="bg-small bg-violet mb-3"><%= @book.author %></p>
+        </div>
+        <div>
+          <h3>SCORE:</h3>
+          <p class="bg-small bg-green mb-3"><%= @book.score %></p>
+        </div>
+      </div>
+
+      <h3>DESCRIPTION:</h3>
+      <p class="bg-description"><%= @book.description %></p>
+
+
+    <!-- TODO change to btn path according to the status-->
+      <%= button_to "Wished Books", book_user_books_path(@book), method: :post %>
+    </div>
+
+  </div>
+
+<!----------------- DOWN ---------------->
+
+  <!-- TODO front to review -->
+  <div class="show-down">
+    <% @book.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.comment %></li>
+      <li class="list-group-item"><%= review.rating %></li>
+    <% end %>
+  </div>
+
 </div>
