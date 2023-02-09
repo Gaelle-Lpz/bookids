@@ -1,8 +1,15 @@
-<h1>Reading List</h1>
-<div class="container">
+<div class="container container-margin-left">
+
+  <h1 class="bg-big bg-blue el-center mb-5 mt-5 el-center">My Reading List : </h1>
+
   <% @reading_list_books.each do |book| %>
-    <p><%= book.name %></p>
-    <p><%= current_user.user_books.where(book: book).first.status%></p>
-    <%= link_to "View Book", book_path(book) %>
+    <div class="container-book">
+    <%= link_to book.name , book_path(book), class:"txt-book" %>
+      <% if current_user.user_books.where(book: book).first.status == "read" %>
+        <p class="bg-small bg-violet">Book read</p>
+      <% elsif current_user.user_books.where(book: book).first.status == "pending" %>
+        <p class="bg-small bg-green">In progress</p>
+      <% end %>
+    </div>
   <% end %>
 </div>
