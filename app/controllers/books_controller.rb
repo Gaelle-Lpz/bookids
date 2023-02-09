@@ -31,7 +31,7 @@ class BooksController < ApplicationController
   end
 
   def wish_list
-    @wish_list_books = current_user.user_books.where(wish_validate: false).map{ |user_book| user_book.book }
+    @wish_list_books = current_user.user_books.wished.map{ |user_book| user_book.book }
   end
 
   def search

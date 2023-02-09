@@ -1,0 +1,57 @@
+// size BG
+
+.bg-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: $txt-color;
+  padding: 8px;
+}
+
+.bg-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 32px;
+  color: $txt-color;
+  padding: 8px;
+}
+
+// color BG
+
+.bg-orange {
+  background-color: $light-orange;
+}
+
+.bg-blue {
+  background-color: $light-blue;
+}
+
+.bg-yellow {
+  background-color: $light-yellow;
+}
+
+.bg-violet {
+  background-color: $light-violet;
+}
+
+.bg-green {
+  background-color: $light-green;
+}
+
+// special BG
+
+.bg-description {
+  background-color: $light-bg;
+  border: 3px solid $txt-color;
+  border-radius: 20px;
+  padding: 8px;
+}
