@@ -26,12 +26,22 @@
   text-align: center;
 }
 
-.show-right .el-center {
-  margin: auto;
+.el-center {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .show-element {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+
+.container-book {
+  width: 100%;
+}
+
+.txt-book {
+  text-decoration: none;
+  color: $txt-color;
 }

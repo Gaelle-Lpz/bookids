@@ -131,6 +131,21 @@ user_book7 = UserBook.create!(
   read_validate: false
 )
 
+user_book8 = UserBook.create!(
+  user_id: user2.id,
+  book_id: book1.id,
+  status: 2,
+  wish_validate: true,
+  read_validate: false
+)
+
+user_book9 = UserBook.create!(
+  user_id: user2.id,
+  book_id: book3.id,
+  status: 2,
+  wish_validate: true,
+  read_validate: true
+)
 #reviews
 
 review1 = Review.create!(

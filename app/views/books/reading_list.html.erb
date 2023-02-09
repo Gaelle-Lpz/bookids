@@ -1,7 +1,12 @@
-<h1>Reading List</h1>
-<div class="container">
-  <% @reading_list_books.each do |book| %>
-    <p><%= book.name %></p>
-    <%= link_to "View Book", book_path(book) %>
-  <% end %>
+<div class="container container-margin-left">
+
+  <h1 class="bg-big bg-blue el-center mb-5 mt-5 el-center">My Reading List : </h1>
+
+    <% @reading_list_books.each do |book| %>
+      <div class="container-book">
+        <%= link_to book.name , book_path(book), class:"txt-book" %>
+      </div>
+    <% end %>
+
+
 </div>

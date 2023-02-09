@@ -1,13 +1,16 @@
-<h1>Book Index</h1>
-<%= link_to "Reading List", reading_list_books_path %>
-<div class="container">
-  <% @reading_list_books.each do |book| %>
-    <p><%= link_to "#{book.name}", book_path(book) %></p>
-  <% end %>
-</div>
-<%= link_to "Wish List", wish_list_books_path %>
-<div class="container">
-  <% @wish_list_books.each do |book| %>
-    <p><%= link_to "#{book.name}", book_path(book) %></p>
-  <% end %>
+<div class="container container-margin-left">
+  <h1>Book Index</h1>
+  <%= link_to "Reading List", reading_list_books_path %>
+  <div class="container">
+    <% @reading_list_books.each do |book| %>
+      <p><%= link_to "#{book.name}", book_path(book) %></p>
+    <% end %>
+  </div>
+  <%= link_to "Wish List", wish_list_books_path %>
+  <div class="container">
+    <% @wish_list_books.each do |book| %>
+      <p><%= link_to "#{book.name}", book_path(book) %></p>
+    <% end %>
+  </div>
+
 </div>
