@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get :reading_list
       get :wish_list
+      get :search
     end
     member do
       get :add_to_wish_list

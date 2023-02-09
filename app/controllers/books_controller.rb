@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     #define wish list and reading list
     @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
     @wish_list_books = current_user.user_books.where(wish_validate: false).map{ |user_book| user_book.book }
+
   end
 
   def show
@@ -31,6 +32,14 @@ class BooksController < ApplicationController
 
   def wish_list
     @wish_list_books = current_user.user_books.where(wish_validate: false).map{ |user_book| user_book.book }
+  end
+
+  def search
+    if params[:query].present?
+      @books = Book.book_search(params[:query])
+    else
+      @books = Book.all
+    end
   end
 
   private
