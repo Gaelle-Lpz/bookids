@@ -303,18 +303,8 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-<<<<<<< HEAD
   font-awesome-sass (~> 6.3)
   googlebooks
-=======
-<<<<<<< HEAD
-  font-awesome-sass (~> 6.1)
-  googlebooks
-=======
-  googlebooks
-  font-awesome-sass (~> 6.3)
->>>>>>> 278c7113a02f3adb80c402df359c9292936179ee
->>>>>>> c6f35b1611f1d93d336bb74857a69fbb7fd77479
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
