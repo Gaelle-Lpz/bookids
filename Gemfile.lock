@@ -125,11 +125,14 @@ GEM
       sassc (~> 2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+
     googlebooks (0.0.9)
       httparty
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
+
+
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -294,8 +297,13 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
+<<<<<<< HEAD
+  font-awesome-sass (~> 6.1)
+  googlebooks
+=======
   googlebooks
   font-awesome-sass (~> 6.3)
+>>>>>>> 278c7113a02f3adb80c402df359c9292936179ee
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
