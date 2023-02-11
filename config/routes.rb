@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   end
 
   get "rewards", to: "pages#rewards"
+  resources :rewards, only: [:index]
 end
