@@ -1,1 +1,565 @@
 // Specific CSS for your home-page
+#shelf {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  background-image: url("https://webdevprojects23.com/bookids2/vectors/bedroom3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -35%;
+  height: 565px;
+  padding-top: 50px ;
+
+}
+
+/* BOOKS LIBRARY */
+
+.book-bg {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+}
+.book-bg:hover {
+  box-shadow: 0 0.5rem 3rem -0.5rem rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  margin-top: -15px;
+  transform: scale(1.03, 1.03);
+}
+/* END BOOKS LIBRARY*/
+
+/* BOOK WIDTHS */
+.graphic {
+  width: 6rem;
+}
+.data {
+  width: 5rem;
+}
+.photo {
+  width: 5rem;
+}
+.landscape {
+  width: 6rem;
+}
+.writing {
+  width: 4rem;
+}
+.web {
+  width: 5rem;
+}
+/* END BOOK WIDTHS */
+
+/* TITLE SHADOWS */
+.book h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+.web .book h1,
+h3 {
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.6);
+}
+/* END TITLE SHADOWS */
+
+/* BOOK ATTRIBUTES */
+.book {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset -0.35rem 0 0.5rem rgba(0, 0, 0, 0.4),
+    inset 0.35rem 0 0.5rem rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+.contents {
+  opacity: 0;
+}
+/* END BOOKS ATTRIBUTES */
+
+/* Social graphic Bookids Github */
+
+.graphic .book {
+  align-items: center;
+  background: linear-gradient(0.25turn, #3f87a6, #0f34d8, #3c86f6);
+  font-family: "Unica One", cursive;
+  color: darkorange;
+
+}
+
+/* DATA VISUALIZATION */
+
+.data .book {
+  background: linear-gradient(0.25turn, #c6d17b, #dae179, #c6c661);
+  font-family: "Smooch Sans", sans-serif;
+  color: rgb(221, 206, 206);
+}
+/* END DATA VISUALIZATION */
+
+/* Bookids Team DESIGN */
+.landscape .book {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe, #087dc6);
+  font-family: "Fredericka the Great", cursive;
+  color: rgb(247, 229, 192);
+}
+/* END Bookids Team DESIGN */
+
+/* Bookids Application V1 */
+
+.web .book {
+  background: linear-gradient(to right, #b286c0 0%, #d361db, #d879c7);
+  font-family: "Inconsolata", monospace;
+  color: #333;
+}
+/* END Bookids Application V1 */
+
+/* OPEN BOOKS Home */
+
+.book-bg.active {
+  box-shadow: 0 0.5rem 3rem -0.5rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 61rem;
+  height: 32rem;
+  margin-top: -22px;
+  z-index: 10;
+  border-top-width: 0;
+}
+.contents {
+  display: flex;
+  position: absolute;
+}
+.book-bg.active .contents {
+  background-color: antiquewhite;
+  position: fixed;
+  opacity: 100;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  border-left-style: double;
+  border-right-style: double;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-color: rgb(92, 92, 92);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: antiquewhite;
+  border-bottom-style: groove;
+  border-bottom-color: rgb(155, 153, 153);
+  border-bottom-width: 2px;
+  color: #333;
+  -ms-writing-mode: lr-tb;
+      writing-mode: horizontal-tb;
+  font-family: "Nothing You Could Do", cursive;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 4rem);
+  height: calc(100% - 4em);
+  margin: 2rem;
+}
+.page h1,
+h3 {
+  text-shadow: none;
+}
+.is-grid {
+  display: grid;
+  gap: 5px;
+  grid-template: "1fr 1fr 1fr" "1fr 1fr 1fr" "1fr 1fr 1fr";
+}
+.illus {
+  border: 5px solid white;
+  flex: 1;
+  background-size: cover;
+}
+.text {
+  margin: 1rem;
+}
+#page-shading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(30, 30, 30, 0.1),
+    transparent 25%,
+    transparent 30%,
+    rgba(30, 30, 30, 0.3) 48%,
+    rgba(30, 30, 30, 0.4) 50%,
+    transparent 50%,
+    rgba(30, 30, 30, 0.3) 70%,
+    transparent
+  );
+}
+.book-bg.active #book-shading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 43%,
+    rgba(30, 30, 30, 0.3) 44%,
+    rgba(30, 30, 30, 0.5) 45%,
+    rgba(30, 30, 30, 0.4) 50%,
+    rgba(30, 30, 30, 0.65) 55%,
+    rgba(30, 30, 30, 0.3) 56%,
+    transparent 57%,
+    transparent
+  );
+}
+/* END OPEN BOOK */
+
+/* BACK ARROW */
+#back svg {
+  position: absolute;
+  border: none;
+  width: 2rem;
+  right: 0.25rem;
+  top: 0.125rem;
+  z-index: 10;
+  opacity: 85%;
+  filter: drop-shadow(0px 0px 2px black);
+}
+#back svg:hover {
+  opacity: 100%;
+  filter: drop-shadow(0px 0px 2px whitesmoke);
+}
+
+/* Bear mascotte Booky */
+
+.toggleWrapper {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  padding: 0 200px;
+  transform: translate3d(-50%, -50%, 0);
+
+  input {
+    position: absolute;
+    left: -99em;
+  }
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  width: 75px;
+  top: 36px;
+  left: 53%;
+  transform: translateX(-50%);
+  height: 40px;
+  background-color: #D2B48C;
+  border-radius: 90px - 6;
+  z-index: 2;
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.toggle__handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 40px;
+  width: 40px - 6;
+  height: 40px - 6;
+  background-color: #A52A2A;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(180deg);
+}
+
+input:checked {
+  + .toggle {
+
+    &:after {
+      color: $white;
+    }
+
+    .toggle__handler {
+      transform: translate3d(-49px, 0, 0) rotate(0);
+    }
+    + .bear-body {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.bear-body {
+  position: relative;
+  border-radius: 20px 10px 5px;
+
+  border-bottom: 150px solid #ad4646;
+  border-left: 20px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 94px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    top: -16px;
+    background: radial-gradient(rgb(202, 159, 33) 5px, brown 6px);
+  }
+  &::before {
+    left: -12.5px;
+  }
+  &::after {
+    right: -12.5px;
+  }
+  .eye {
+    position: absolute;
+    top: 18px;
+    background: Brown;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 4px, white 1px, Brown 2px);
+
+    &.left {
+      left: 20px;
+      animation: blink 3s ease-in-out infinite;
+    }
+    &.right {
+      left: 46px;
+      animation: blink 3.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  85% {
+    transform: rotateX(0deg);
+  }
+  90% {
+    transform: rotateX(90deg);
+  }
+}
+
+/* END Bear mascotte Booky */
+
+/* Start Comics style Info bulle */
+
+.bubble-text {
+
+  background: $blue;
+  color:#fff;
+  padding:7px 15px;
+  border-radius: 22px;
+  width:270px;
+
+}
+
+.bubble-text::after{
+content:"";
+border-left:20px solid transparent;
+border-right:20px solid transparent;
+border-top: 20px solid $blue;
+position: absolute;
+font-size: medium;
+}
+
+.bubble {
+
+  padding-top: 70px;
+  padding-right: 80px;
+  font-weight: 500;
+
+
+}
+
+.bubble-text2 {
+  font-size: x-large;
+
+}
+
+
+.book-connect {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+
+  align-items: center;
+  background: radial-gradient(
+      ellipse at top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.75)
+    ),
+    radial-gradient(ellipse at bottom, rgba(70, 70, 70, 0.5), transparent);
+  font-family: "Unica One", cursive;
+  color: rgb(0, 94, 255);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  width: 6rem;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: bold;
+  padding-block: 20px 40px;
+
+}
+
+.book-connect:hover {
+  transform: translateY(-20px);
+  color: $red;
+}
+
+
+.container8 {
+  margin: 20px;
+  width: 400px;
+  height: 4px;
+  background-color: #f2560d;
+  width: 500px;
+  display: inline;
+}
+
+
+// Logo home footer zone
+
+.logo-home {
+  width: 250px;
+  margin-left: 47%;
+  margin-top: 2%;
+
+}
+
+// Linear gradient for the home footer zone
+
+.bg-home {
+
+  background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+  background-attachment: fixed;
+}
+
+// Book Sign in
+
+.book-signin {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+
+  align-items: center;
+  background: radial-gradient(
+      ellipse at top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.75)
+    ),
+    radial-gradient(ellipse at bottom, rgba(70, 70, 70, 0.5), transparent);
+  font-family: "Unica One", cursive;
+  color: rgb(17, 19, 21);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  background: linear-gradient(0.25turn, #3fa667, #ebf8e1, #2fe33e);
+  width: 6rem;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: bold;
+  padding-block: 20px 40px;
+
+}
+
+.book-signin:hover {
+  transform: translateY(-20px);
+  color: $red;
+}
+
+// End Book Sign in
