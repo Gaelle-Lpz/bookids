@@ -57,3 +57,22 @@
 .txt-book:hover {
   color: $bg-color;
 }
+
+.index-container {
+  width: 100%;
+  border-bottom: 4px solid $bg-color;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.search-container {
+  margin: 32px;
+}
+
+.search-form {
+  width: 50%;
+}
