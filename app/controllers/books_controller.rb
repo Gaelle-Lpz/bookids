@@ -36,7 +36,16 @@ class BooksController < ApplicationController
 
   def search
     if params[:query].present?
-      @books = Book.book_search(params[:query])
+      @search_books = Book.book_search(params[:query])
+      if @search_books.empty?
+        @search_books = []
+        @books = GoogleBooks.search('The Great Gatsby', {:count => 3})
+        @books.each do |book|
+          @book = Book.new(name: book.title, description: book.description, author: book.authors, image: book.image_link, isbn: book.isbn, score: 0.0 )
+          @book.save
+          @search_books << @book
+        end
+      end
     else
       @books = Book.all
     end
