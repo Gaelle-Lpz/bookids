@@ -85,14 +85,6 @@ user_book1 = UserBook.create!(
   read_validate: false
 )
 
-user_book2 = UserBook.create!(
-  user_id: user2.id,
-  book_id: book2.id,
-  status: 2,
-  wish_validate: true,
-  read_validate: true
-)
-
 user_book3 = UserBook.create!(
   user_id: user3.id,
   book_id: book3.id,
@@ -147,21 +139,6 @@ user_book9 = UserBook.create!(
   read_validate: true
 )
 
-user_book10 = UserBook.create!(
-  user_id: user2.id,
-  book_id: book4.id,
-  status: 0,
-  wish_validate: false,
-  read_validate: false
-)
-
-user_book11 = UserBook.create!(
-  user_id: user2.id,
-  book_id: book1.id,
-  status: 0,
-  wish_validate: false,
-  read_validate: false
-)
 #reviews
 
 review1 = Review.create!(
