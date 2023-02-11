@@ -7,6 +7,6 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-<% @books.each do |book| %>
-    <p><%= link_to "#{book.name}", book_path(book) %></p>
+<% @search_books.each do |book| %>
+    <p><%= book.name %></p>
 <% end %>
