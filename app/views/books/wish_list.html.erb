@@ -1,6 +1,10 @@
 <div class="container container-margin-left">
 
-  <h1 class="bg-big bg-blue el-center mb-5 mt-5 el-center">My WishList : </h1>
+  <%= link_to books_path do %>
+    <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+  <% end %>
+
+  <h1 class="bg-big bg-blue el-center mb-5 el-center">My WishList : </h1>
 
   <% @wish_list_books.each do |book| %>
     <div class="container-book">
