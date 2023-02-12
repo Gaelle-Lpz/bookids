@@ -1,58 +1,424 @@
 // Specific CSS for your home-page
-.container-form4 {
-
-  max-width: 232px;
-  position: relative;
-  margin: 0 auto;
-  padding: 30px 30px;
-  border-radius: 26px;
-  box-shadow: 1px 0 10px 15px rgba(0, 0, 0, .5);
-  transition: .5s;
-  margin-left: 42%;
-  margin-top: 14%;
-
-  /* Adding z index propertie to correct the problem of the desactivation of the form */
-  z-index: 1;
-}
-
-.container-form5 {
-
-  background-image: image-url("https://webdevprojects23.com/bookids2/vectors/library3.jpg");
+#shelf {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  background-image: url("bedroom3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 780px;
+  background-position: -35%;
+  height: 565px;
   padding-top: 50px;
+
 }
 
+/* BOOKS LIBRARY */
 
-/* Adding Halo animation from the door of the login form page */
+.book-bg {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+}
+.book-bg:hover {
+  box-shadow: 0 0.5rem 3rem -0.5rem rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  margin-top: -15px;
+  transform: scale(1.03, 1.03);
+}
+/* END BOOKS LIBRARY*/
 
-.container-form4::after {
-  content: "";
+/* BOOK WIDTHS */
+.graphic {
+  width: 6rem;
+}
+.data {
+  width: 5rem;
+}
+.photo {
+  width: 5rem;
+}
+.landscape {
+  width: 6rem;
+}
+.writing {
+  width: 4rem;
+}
+.web {
+  width: 5rem;
+}
+/* END BOOK WIDTHS */
+
+/* TITLE SHADOWS */
+.book h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+.web .book h1,
+h3 {
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.6);
+}
+/* END TITLE SHADOWS */
+
+/* BOOK ATTRIBUTES */
+.book {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset -0.35rem 0 0.5rem rgba(0, 0, 0, 0.4),
+    inset 0.35rem 0 0.5rem rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+.contents {
+  opacity: 0;
+}
+/* END BOOKS ATTRIBUTES */
+
+/* Social graphic Bookids Github */
+
+.graphic .book {
+  align-items: center;
+  background: linear-gradient(0.25turn, #3f87a6, #0f34d8, #3c86f6);
+  font-family: "Unica One", cursive;
+  color: darkorange;
+
+}
+
+/* DATA VISUALIZATION */
+
+.data .book {
+  background: linear-gradient(0.25turn, #c6d17b, #dae179, #c6c661);
+  font-family: "Smooch Sans", sans-serif;
+  color: rgb(221, 206, 206);
+}
+/* END DATA VISUALIZATION */
+
+/* Bookids Team DESIGN */
+.landscape .book {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe, #087dc6);
+  font-family: "Fredericka the Great", cursive;
+  color: rgb(247, 229, 192);
+}
+/* END Bookids Team DESIGN */
+
+/* Bookids Application V1 */
+
+.web .book {
+  background: linear-gradient(to right, #b286c0 0%, #d361db, #d879c7);
+  font-family: "Inconsolata", monospace;
+  color: #333;
+}
+/* END Bookids Application V1 */
+
+/* OPEN BOOKS Home */
+
+.book-bg.active {
+  box-shadow: 0 0.5rem 3rem -0.5rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 61rem;
+  height: 32rem;
+  margin-top: -22px;
+  z-index: 10;
+  border-top-width: 0;
+}
+.contents {
+  display: flex;
+  position: absolute;
+}
+.book-bg.active .contents {
+  background-color: antiquewhite;
+  position: fixed;
+  opacity: 100;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  border-left-style: double;
+  border-right-style: double;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-color: rgb(92, 92, 92);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: antiquewhite;
+  border-bottom-style: groove;
+  border-bottom-color: rgb(155, 153, 153);
+  border-bottom-width: 2px;
+  color: #333;
+  -ms-writing-mode: lr-tb;
+      writing-mode: horizontal-tb;
+  font-family: "Nothing You Could Do", cursive;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 4rem);
+  height: calc(100% - 4em);
+  margin: 2rem;
+}
+.page h1,
+h3 {
+  text-shadow: none;
+}
+.is-grid {
+  display: grid;
+  gap: 5px;
+  grid-template: "1fr 1fr 1fr" "1fr 1fr 1fr" "1fr 1fr 1fr";
+}
+.illus {
+  border: 5px solid white;
+  flex: 1;
+  background-size: cover;
+}
+.text {
+  margin: 1rem;
+}
+#page-shading {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 26px;
-  box-shadow: 0 0 0 20px rgba(255, 255, 0, 0.2);
-  animation: halo-animation 2s infinite linear;
-  top: 0;
-  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 30, 30, 0.1),
+    transparent 25%,
+    transparent 30%,
+    rgba(30, 30, 30, 0.3) 48%,
+    rgba(30, 30, 30, 0.4) 50%,
+    transparent 50%,
+    rgba(30, 30, 30, 0.3) 70%,
+    transparent
+  );
+}
+.book-bg.active #book-shading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 43%,
+    rgba(30, 30, 30, 0.3) 44%,
+    rgba(30, 30, 30, 0.5) 45%,
+    rgba(30, 30, 30, 0.4) 50%,
+    rgba(30, 30, 30, 0.65) 55%,
+    rgba(30, 30, 30, 0.3) 56%,
+    transparent 57%,
+    transparent
+  );
+}
+/* END OPEN BOOK */
 
-  /* Adding z index propertie to put correct the problem of the desactivation of the form */
-  z-index: -1;
+/* BACK ARROW */
+#back svg {
+  position: absolute;
+  border: none;
+  width: 2rem;
+  right: 0.25rem;
+  top: 0.125rem;
+  z-index: 10;
+  opacity: 85%;
+  filter: drop-shadow(0px 0px 2px black);
+}
+#back svg:hover {
+  opacity: 100%;
+  filter: drop-shadow(0px 0px 2px whitesmoke);
+}
+
+
+
+.book-connect {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+
+  align-items: center;
+  background: radial-gradient(
+      ellipse at top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.75)
+    ),
+    radial-gradient(ellipse at bottom, rgba(70, 70, 70, 0.5), transparent);
+  font-family: "Unica One", cursive;
+  color: rgb(0, 94, 255);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  width: 6rem;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: bold;
+  padding-block: 20px 40px;
 
 }
 
-@keyframes halo-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(255, 255, 0, 0.2);
-  }
-
-  50% {
-    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0.2);
-  }
-
-  100% {
-    box-shadow: 0 0 0 40px rgba(255, 255, 0, 0);
-  }
+.book-connect:hover {
+  transform: translateY(-20px);
+  color: $red;
 }
+
+
+.container8 {
+  margin: 20px;
+  width: 400px;
+  height: 4px;
+  background-color: #f2560d;
+  width: 500px;
+  display: inline;
+}
+
+
+// Logo home footer zone
+
+.logo-home {
+  width: 250px;
+  margin-left: 43%;
+  margin-top: 1%;
+
+}
+
+.slogan {
+  text-align: center;
+  font-size: 30px;
+  background: -webkit-linear-gradient(109.6deg, rgb(219, 102, 7) 11.2%, rgb(50, 16, 186) 55.4%, rgb(246, 181, 2) 100.2%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  color: white;
+
+}
+
+// Linear gradient for the home footer zone
+
+.bg-home {
+
+  background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+  background-attachment: fixed;
+}
+
+// Book Sign in
+
+.book-signin {
+  overflow: hidden;
+  height: 32rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 4px;
+  background: grey;
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  -o-border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+     border-image: linear-gradient(
+    to right,
+    #333,
+    #333 15%,
+    antiquewhite 30%,
+    antiquewhite 70%,
+    #333 85%,
+    #333
+  );
+  border-image-slice: 1;
+  order: 200;
+
+  align-items: center;
+  background: radial-gradient(
+      ellipse at top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.75)
+    ),
+    radial-gradient(ellipse at bottom, rgba(70, 70, 70, 0.5), transparent);
+  font-family: "Unica One", cursive;
+  color: rgb(17, 19, 21);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  background: linear-gradient(0.25turn, #3fa667, #ebf8e1, #2fe33e);
+  width: 6rem;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: bold;
+  padding-block: 20px 40px;
+
+}
+
+.book-signin:hover {
+  transform: translateY(-20px);
+  color: $red;
+}
+
+// End Book Sign in
