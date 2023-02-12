@@ -1,0 +1,71 @@
+// signup page new inscription
+
+.container-form-signup2 {
+
+  max-width: 450px;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 30px;
+  border-radius: 26px;
+  box-shadow: 1px 0 10px 15px rgba(0, 0, 0, .5);
+  transition: .5s;
+  margin-left: 35%;
+  margin-top: 5%;
+
+}
+
+.container-form-signup {
+
+  background-image: url("login-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 710px;
+  padding-top: 50px;
+}
+
+.form-label {
+
+  color: $yellow;
+}
+
+.title-new-signup {
+
+  color: $yellow;
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.form-text {
+  color: $red;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.circle-cloud {
+  width: 100px;
+  height: 100px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: cloud 3s ease-in-out infinite;
+  opacity: 0.33;
+  margin-left: 41%;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
