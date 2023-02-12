@@ -1,13 +1,106 @@
-<section>
-   <div class="container-form5">
-      <div class="container-form4">
-         <div class="title-form-log">BOOKIDS</div>
-       <%= link_to "LIBRARY", books_path %>
-       <a class="btn btn-primary" href="/users/sign_in" role="button">Login</a>
-       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+<head>
+   <meta charset="UTF-8">
+   <title>BOOKIDS</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="app/assets/stylesheets/pages/_home.scss">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inconsolata:wght@200;400&family=Lora&family=Nothing+You+Could+Do&family=Unica+One&family=Smooch+Sans:wght@600&display=swap" rel="stylesheet">
+   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://kit.fontawesome.com/74b8b254d2.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="app/assets/stylesheets/pages/_home.scss">
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+   <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.0.1/dist/progressbar.min.js"></script>
+</head>
+<div id="container8">
+   <body class='bg-home'>
+      <div id='shelf'>
+         <!-- START BOOKS LIBRARY -->
+         <%= link_to books_path, class: "book-connect" do %>
+         <i class="fa-solid fa-book-open" style="transform: rotate(90deg);"></i>
+         BOOKIDS CONNEXION
+         <% end %>
+         <%= link_to new_user_registration_path, class: "book-signin" do %>
+         <i class="fa-regular fa-book" style="transform: rotate(90deg);"></i>
+         BOOKIDS inscription
+         <% end %>
+         <div class='book-bg graphic'>
+            <div class='book flex-column'>
+               <div id='book-shading'></div>
+               <h1 style='margin-left: 35px; line-height: 1%'>
+                  <i class="fa-brands fa-github-alt" style="transform: rotate(90deg);"></i>
+                  Follow us
+               </h1>
+            </div>
+         </div>
+         <!-- BOOKIDS TEAM BOOK -->
+         <div class='book-bg landscape'>
+            <div class='book flex-column'>
+               <div id='book-shading'></div>
+               <h5 style='margin-left: -16px; margin-top: -15%; line-height:10%'>Presentation</h5>
+               <h1 style='margin-left: 45px; line-height: 1%'>
+                  <i class="fa-solid fa-people-group" style="transform: rotate(90deg);"></i>
+                  Bookids Team
+               </h1>
+               <div class='contents'>
+                  <div id='back'>
+                     <svg viewBox="0 0 512 512" width="100" title="chevron-circle-left">
+                        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+                     </svg>
+                  </div>
+                  <div class='page'>
+                     <div class='illus' style='background-image: url(https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)'>
+                     </div>
+                  </div>
+                  <div class='page'>
+                     <div>
+                        <h1>Bookids team</h1>
+                        <p class='text'>&emsp;Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application</p>
+                     </div>
+                  </div>
+                  <div id='page-shading'></div>
+               </div>
+            </div>
+         </div>
+         <!-- BOOKIDS AAPLICATION PRESENTATION -->
+         <div class='book-bg web'>
+            <div class='book'>
+               <div id='book-shading'></div>
+               <h1 style='margin-left: 30px; line-height: 1%'>
+                  <i class="fa-sharp fa-solid fa-code" style="transform: rotate(90deg);"></i>
+                  Bookids
+               </h1>
+               <h3> 1.0</h3>
+               <div class='contents'>
+                  <div id='back'>
+                     <svg viewBox="0 0 512 512" width="100" title="chevron-circle-left">
+                        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+                     </svg>
+                  </div>
+                  <div class='page'>
+                     <h1>Bookids Application V1</h1>
+                     <p class='text'>&emsp;BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS</p>
+                     <p class='text'>&emsp;BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS</p>
+                  </div>
+                  <div class='page'>
+                     <div class='illus' style='background-image: url(https://images.unsplash.com/photo-1484415063229-3d6335668531?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1214&q=80)'>
+                     </div>
+                  </div>
+                  <div id='page-shading'></div>
+               </div>
+            </div>
+         </div>
       </div>
-   </div>
-   </div>
+</div>
+<img class="logo-home" src="https://webdevprojects23.com/bookids2/vectors/logo_transp.png" alt="BOOKIDS">
+<h1 class="slogan">On BOOKIDS, more you read, more you win !</h1>
 
-
-</section>
+<!-- END BOOKS LIBRARY -->
+</body>
+<!-- JAVASCRIPT FILE FOR LIBRARY -->
+<script  src="https://webdevprojects23.com/bookids2/script.js"></script>
+</body>
+</html>
