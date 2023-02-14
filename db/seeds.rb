@@ -18,6 +18,7 @@ family = Family.create(
 user1 = User.create!(
   email: "jessica@lewagon.fr",
   password: "lewagon",
+  total_score: 100,
   family_id: family.id
 )
 
@@ -80,6 +81,14 @@ user4 = User.create!(
 user_book1 = UserBook.create!(
   user_id: user1.id,
   book_id: book1.id,
+  status: 1,
+  wish_validate: true,
+  read_validate: false
+)
+
+user_book2 = UserBook.create!(
+  user_id: user2.id,
+  book_id: book2.id,
   status: 1,
   wish_validate: true,
   read_validate: false
@@ -187,11 +196,13 @@ review7 = Review.create!(
 
 reward1 = Reward.create(
   name: "avatar1",
+  required_score: 100,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/zombie_ixltpr.png"
 )
 
 reward2 = Reward.create(
   name: "avatar2",
+  required_score: 200,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/troll_w5oxkd.png"
 )
 
