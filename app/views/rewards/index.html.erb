@@ -4,11 +4,6 @@
 <ul>
   <% @rewards.each do |reward| %>
     <li><%= reward.name %></li>
-    <% if required_score > total_score %>
-      j'affiche l'avatar
-      <% else %>
-      j'affiche le cadenas
-    <% end %>
     <img src="<%= reward.image %>">
   <% end %>
 </ul>

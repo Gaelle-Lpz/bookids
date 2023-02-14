@@ -195,76 +195,77 @@ review7 = Review.create!(
 #rewards
 
 reward1 = Reward.create(
-  name: "avatar1",
-  required_score: 100,
+  name: "zombie",
+  required_score: 101,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/zombie_ixltpr.png"
 )
 
 reward2 = Reward.create(
-  name: "avatar2",
-  required_score: 200,
+  name: "troll",
+  required_score: 110,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/troll_w5oxkd.png"
 )
 
 reward3 = Reward.create(
-  name: "avatar3",
+  name: "wizard",
+  required_score: 125,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/wizard_odums5.png"
 )
 
 reward4 = Reward.create(
-  name: "avatar4",
+  name: "ninja",
+  required_score: 130,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/ninja_byvs9f.png"
 )
 
 reward5 = Reward.create(
-  name: "avatar5",
+  name: "mutant",
+  required_score: 155,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/mutant_lukfky.png"
 )
 
 reward6 = Reward.create(
-  name: "avatar6",
+  name: "unicorn",
+  required_score: 170,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/unicorn_c4y1hx.png"
 )
 
 reward7 = Reward.create(
-  name: "avatar7",
+  name: "pirate",
+  required_score: 200,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/pirate_liureq.png"
 )
 
 reward8 = Reward.create(
-  name: "avatar8",
+  name: "knight",
+  required_score: 210,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/knight_q8jaaa.png"
 )
 
 reward9 = Reward.create(
-  name: "avatar9",
-  image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/no_avatar_fxdnx3.png"
-)
-
-reward10 = Reward.create(
-  name: "avatar10",
+  name: "alien",
+  required_score: 230,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/alien_ugoa3v.png"
 )
 
-reward11 = Reward.create(
-  name: "avatar11",
+reward10 = Reward.create(
+  name: "elf",
+  required_score: 245,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/elf_etj8xh.png"
 )
 
-reward12 = Reward.create(
-  name: "avatar12",
+reward11 = Reward.create(
+  name: "fairy",
+  required_score: 250,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/fairy_qbgz1e.png"
 )
 
-reward13 = Reward.create(
-  name: "avatar13",
+reward12 = Reward.create(
+  name: "dragon",
+  required_score: 300,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/dragon_zzxmwn.png"
 )
 
-reward14 = Reward.create(
-  name: "avatar14",
-  image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/avatar_lock_nwhmec.png"
-)
 
 #user_rewards
 
