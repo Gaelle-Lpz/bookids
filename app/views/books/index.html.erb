@@ -11,7 +11,15 @@
       <%= submit_tag "Search", class: "btn-small btn-violet ms-3" %>
     <% end %>
   </div>
-
+  <div class="index-container">
+    <div class= "category-container mb-3">
+      <%= link_to "Adventure", search_theme_books_path(query: "Adventure"), class:"btn-small btn-yellow"  %>
+      <%= link_to "Fantasy", search_theme_books_path(query: "Fantasy"), class:"btn-small btn-blue" %>
+      <%= link_to "Comics", search_theme_books_path(query: "Comics"), class:"btn-small btn-orange"  %>
+      <%= link_to "Cartoons", search_theme_books_path(query: "Cartoons"), class:"btn-small btn-violet"  %>
+      <%= link_to "Manga", search_theme_books_path(query: "Manga"), class:"btn-small btn-green"  %>
+    </div>
+  </div>
 
   <div class="index-container">
     <div class="title-container">
@@ -23,7 +31,12 @@
         <%= image_tag book.image, class:"img-index" %>
       <% end %>
     <% end %>
+
+    <% if @wish_list_books.empty? %>
+      <p>You don't have a book on your wish list. You can add one using the search bar at the top of the page.</p>
+    <% end %>
   </div>
+
 
   <div class="index-container">
     <div class="title-container">
@@ -34,6 +47,10 @@
         <%= link_to book_path(book) do %>
           <%= image_tag book.image, class:"img-index" %>
         <% end %>
+      <% end %>
+
+      <% if @reading_list_books.empty? %>
+        <p>You don't have a book in your reading list. Ask your parents to validate the books on your wish list and start the fabulous adventure of reading</p>
       <% end %>
   </div>
 

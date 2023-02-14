@@ -1,0 +1,26 @@
+<div class="container-margin-left">
+
+
+  <div class="search-container">
+    <%= link_to books_path do %>
+      <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+    <% end %>
+    <%= form_with url: search_books_path, method: :get, class: "el-center search-form d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a book"
+      %>
+      <%= submit_tag "Search", class: "btn-small btn-violet ms-3" %>
+    <% end %>
+  </div>
+
+  <h2 class="ms-3">Choose a Book :</h2>
+  <% @theme_books.each do |book| %>
+        <%= link_to book_path(book) do %>
+          <% unless book.image.nil? %>
+            <%= image_tag book.image, class:"img-index" %>
+          <% end %>
+        <% end %>
+  <% end %>
+</div>

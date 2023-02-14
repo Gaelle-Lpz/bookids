@@ -51,6 +51,16 @@ class BooksController < ApplicationController
     end
   end
 
+  def search_theme
+    @theme_books = []
+    @books = GoogleBooks.search("subject:#{params[:query]}", {:count => 10})
+    @books.each do |book|
+      @book = Book.new(name: book.title, description: book.description, author: book.authors, image: book.image_link, isbn: book.isbn, score: 0.0 )
+      @book.save
+      @theme_books << @book
+    end
+  end
+
   private
 
   def set_book

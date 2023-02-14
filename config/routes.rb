@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get :reading_list
       get :wish_list
       get :search
+      get :search_theme
     end
     member do
       get :add_to_wish_list
