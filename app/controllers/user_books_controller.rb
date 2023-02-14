@@ -14,7 +14,7 @@ class UserBooksController < ApplicationController
 
   def update
     @user_book = UserBook.find_by(user: current_user, book_id: params[:book_id])
-    UserBook.update(@user_book.id, :read_validate => true)
+    UserBook.update(@user_book.id, :status => 1)
     redirect_to reading_list_books_path
   end
 end
