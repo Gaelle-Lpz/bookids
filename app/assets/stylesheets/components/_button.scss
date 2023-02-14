@@ -88,3 +88,20 @@
   border: 2px solid $light-green;
   color: $gray;
 }
+
+//
+
+.book-cover-button {
+  background-image: url("https://img.freepik.com/premium-vector/cover-book-vector_672017-1634.jpg?w=360");
+  background-size: cover;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.book-cover-button:hover {
+  background-image: url("https://img.freepik.com/premium-vector/cover-book-vector_672017-1634.jpg?w=360");
+}
