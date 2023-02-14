@@ -4,7 +4,7 @@ class BooksController < ApplicationController
     @books = Book.all
     #define wish list and reading list
     @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
-    @wish_list_books = current_user.user_books.where(wish_validate: false).map{ |user_book| user_book.book }
+    @wish_list_books = current_user.user_books.wished.map{ |user_book| user_book.book }
 
   end
 
