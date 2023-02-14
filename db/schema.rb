@@ -77,7 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_180545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "family_id"
-    t.integer "role"
     t.boolean "parent", default: false
     t.integer "total_score"
     t.index ["email"], name: "index_users_on_email", unique: true
