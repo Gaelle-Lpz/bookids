@@ -48,6 +48,9 @@
 
     <!-- TODO change to btn path according to the status-->
       <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-small btn-violet" %>
+      <% unless @user_book.nil? %>
+       <%= button_to "Start Reading", book_user_book_path(@book, @user_book), method: :put, class:"btn-small btn-violet" %>
+      <% end %>
     </div>
 
   </div>

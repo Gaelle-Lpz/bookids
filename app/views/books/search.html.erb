@@ -18,7 +18,9 @@
   <h2 class="ms-3">Choose a Book :</h2>
   <% @search_books.each do |book| %>
         <%= link_to book_path(book) do %>
-          <%= image_tag book.image, class:"img-index" %>
+          <% unless book.image.nil?%>
+            <%= image_tag book.image, class:"img-index" %>
+          <% end %>
         <% end %>
   <% end %>
 </div>
