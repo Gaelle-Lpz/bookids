@@ -1,6 +1,19 @@
+
+<div class="container" style="margin-left: 400px">
 <h1>Liste des récompenses</h1>
 <ul>
   <% @rewards.each do |reward| %>
     <li><%= reward.name %></li>
+    <% if required_score > total_score %>
+      j'affiche l'avatar
+      <% else %>
+      j'affiche le cadenas
+    <% end %>
+    <img src="<%= reward.image %>">
   <% end %>
 </ul>
+<p>Total score:<%= @user_total_score %></p>
+</div>
+
+
+<!--- En back, tu ajoutes une colonne required_score exemple : si required score = 100 , il fut au moins 100 points pour débloquer cette reward -->
