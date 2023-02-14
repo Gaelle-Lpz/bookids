@@ -3,13 +3,14 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     #define wish list and reading list
-    @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
-    @wish_list_books = current_user.user_books.wished.map{ |user_book| user_book.book }
+    @reading_list_books = current_user.user_books.pending.map{ |user_book| user_book.book }
+    @wish_list_books = current_user.user_books.wished.where(read_validate: false).map{ |user_book| user_book.book }
 
   end
 
   def show
     @reviews = @book.reviews
+    @user_book = UserBook.find_by(user: current_user, book_id: @book.id)
   end
 
   def new
@@ -27,11 +28,11 @@ class BooksController < ApplicationController
   end
 
   def reading_list
-    @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
+    @reading_list_books = current_user.user_books.pending.map{ |user_book| user_book.book }
   end
 
   def wish_list
-    @wish_list_books = current_user.user_books.wished.map{ |user_book| user_book.book }
+    @wish_list_books = current_user.user_books.wished.where(read_validate: false).map{ |user_book| user_book.book }
   end
 
   def search
