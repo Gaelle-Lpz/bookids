@@ -47,7 +47,7 @@ class BooksController < ApplicationController
         end
       end
     else
-      @books = Book.all
+      @search_books = Book.all
     end
   end
 
