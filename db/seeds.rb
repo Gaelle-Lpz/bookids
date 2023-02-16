@@ -17,27 +17,35 @@ family = Family.create(
 # Create User
 user1 = User.create!(
   email: "jessica@lewagon.fr",
+  user_name: "Jessica",
   password: "lewagon",
   total_score: 100,
-  family_id: family.id
+  family_id: family.id,
+  total_score: 90
 )
 
 user2 = User.create!(
   email: "gaelle@lewagon.fr",
+  user_name: "Gaelle",
   password: "lewagon",
-  family_id: family.id
+  family_id: family.id,
+  total_score: 120
 )
 
 user3 = User.create!(
   email: "seb@lewagon.fr",
+  user_name: "Sébastien",
   password: "lewagon",
-  family_id: family.id
+  family_id: family.id,
+  total_score: 130
 )
 
 user4 = User.create!(
   email: "shaherazade@lewagon.fr",
+  user_name: "Shaherazade",
   password: "lewagon",
-  family_id: family.id
+  family_id: family.id,
+  total_score: 150
 )
 
 # Create Book
