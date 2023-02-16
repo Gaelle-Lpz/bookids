@@ -5,10 +5,14 @@
   <% end %>
 
   <div class="container-profil">
-    <p class="bg-small bg-blue"><%=@user.user_name %></p>
-    <p class="bg-small bg-violet"><%=@user.total_score %></p>
-    <p class="bg-small bg-green"><%=@reading_list_books.count %></p>
-    <p class="bg-small bg-yellow"><%=@wish_list_books.count %></p>
+    <div class="profil-name">
+      <p class="bg-small bg-blue"><%=@user.user_name %></p>
+      <p class="bg-small bg-violet"><%=@user.total_score %></p>
+    </div>
+    <div class="profil-book">
+      <p class="bg-small bg-green"><%=@reading_list_books.count %></p>
+      <p class="bg-small bg-yellow"><%=@wish_list_books.count %></p>
+    </div>
     <!-- TODO add user friends and reward-->
   </div>
 

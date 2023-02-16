@@ -19,9 +19,8 @@ user1 = User.create!(
   email: "jessica@lewagon.fr",
   user_name: "Jessica",
   password: "lewagon",
-  total_score: 100,
+  total_score: 140,
   family_id: family.id,
-  total_score: 90
 )
 
 user2 = User.create!(
