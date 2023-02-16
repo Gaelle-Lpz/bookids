@@ -4,9 +4,12 @@
     <i class="fas fa-arrow-alt-circle-left icon-back"></i>
   <% end %>
 
-  <%#@user.name %>
-  <%=@user.total_score %>
-  <%=@reading_list_books.count %>
-  <%=@wish_list_books.count %>
+  <div class="container-profil">
+    <p class="bg-small bg-blue"><%=@user.user_name %></p>
+    <p class="bg-small bg-violet"><%=@user.total_score %></p>
+    <p class="bg-small bg-green"><%=@reading_list_books.count %></p>
+    <p class="bg-small bg-yellow"><%=@wish_list_books.count %></p>
+    <!-- TODO add user friends and reward-->
+  </div>
 
 </div>
