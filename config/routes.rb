@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # users
+  get 'profil/:user_id', to: 'pages#profil', as: 'user_profil'
+
+  # books
   resources :books do
     resources :user_books, only: [:create, :update]
     collection do

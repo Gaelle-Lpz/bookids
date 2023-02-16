@@ -5,8 +5,8 @@ class PagesController < ApplicationController
   end
 
   def profil
-    
+    @user = User.find(params[:user_id])
+    @reading_list_books = current_user.user_books.pending.map{ |user_book| user_book.book }
+    @wish_list_books = current_user.user_books.wished.where(read_validate: false).map{ |user_book| user_book.book }
   end
-
-
 end
