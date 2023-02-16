@@ -88,5 +88,10 @@
   margin: 80px 30% auto 30%;
   padding: 100px 36px 36px 36px;
   position: relative;
+}
 
+.container-reward {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

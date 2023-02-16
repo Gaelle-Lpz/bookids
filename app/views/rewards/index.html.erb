@@ -1,20 +1,23 @@
 
-<div class="container" style="margin-left: 400px">
-<h1>Liste des récompenses</h1>
-<ul>
-  <% @rewards.each do |reward| %>
-    <li><%= reward.name %></li>
-    <% if @user_total_score > reward.required_score %>
-      <%= image_tag reward.image || "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/no_avatar_fxdnx3.png" %>
-    <% else %>
-      <%= image_tag "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/avatar_lock_nwhmec.png" %>
-    <% end %>
-  <% end %>
-</ul>
-<p>Total score:<%= @user_total_score %></p>
+
+<div class="container container-margin-left">
+    <h1 class="text-center mt-5">Your Rewards</h1>
+    <h2 class="text-center mb-5"><%= "Your score is #{@user_total_score} points! Congratulations! Reading new books will earn you more points for even more rewards" %></h2>
+
+  <div class="container-rewards row">
+      <% @rewards.each do |reward| %>
+        <div class="container-reward col m-3">
+          <h2 class="mb-2 text-left"><%= reward.name %></h2>
+          <% if @user_total_score > reward.required_score %>
+            <%= image_tag reward.image, class:"navbar-avatar mb-2" %>
+          <% else %>
+            <%= image_tag "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/avatar_lock_nwhmec.png", class:"navbar-avatar mb-2" %>
+          <% end %>
+          <!-- TODO add btn to change avatar to reward-->
+          <p class="bg-small bg-blue text-center">Use this reward</p>
+        </div>
+      <% end %>
+  </div>
+
+
 </div>
-
-
-
-
-<!--- En back, tu ajoutes une colonne required_score exemple : si required score = 100 , il fut au moins 100 points pour débloquer cette reward -->

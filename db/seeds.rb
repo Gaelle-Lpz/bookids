@@ -202,73 +202,73 @@ review7 = Review.create!(
 #rewards
 
 reward1 = Reward.create(
-  name: "zombie",
+  name: "Zombie :",
   required_score: 101,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/zombie_ixltpr.png"
 )
 
 reward2 = Reward.create(
-  name: "troll",
+  name: "Troll :",
   required_score: 110,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/troll_w5oxkd.png"
 )
 
 reward3 = Reward.create(
-  name: "wizard",
+  name: "Wizard :",
   required_score: 125,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/wizard_odums5.png"
 )
 
 reward4 = Reward.create(
-  name: "ninja",
+  name: "Ninja :",
   required_score: 130,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/ninja_byvs9f.png"
 )
 
 reward5 = Reward.create(
-  name: "mutant",
+  name: "Mutant :",
   required_score: 155,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/mutant_lukfky.png"
 )
 
 reward6 = Reward.create(
-  name: "unicorn",
+  name: "Unicorn :",
   required_score: 170,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/unicorn_c4y1hx.png"
 )
 
 reward7 = Reward.create(
-  name: "pirate",
+  name: "Pirate :",
   required_score: 200,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/pirate_liureq.png"
 )
 
 reward8 = Reward.create(
-  name: "knight",
+  name: "Knight :",
   required_score: 210,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/knight_q8jaaa.png"
 )
 
 reward9 = Reward.create(
-  name: "alien",
+  name: "Alien :",
   required_score: 230,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/alien_ugoa3v.png"
 )
 
 reward10 = Reward.create(
-  name: "elf",
+  name: "Elf :",
   required_score: 245,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/elf_etj8xh.png"
 )
 
 reward11 = Reward.create(
-  name: "fairy",
+  name: "Fairy :",
   required_score: 250,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/fairy_qbgz1e.png"
 )
 
 reward12 = Reward.create(
-  name: "dragon",
+  name: "Dragon :",
   required_score: 300,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/dragon_zzxmwn.png"
 )
