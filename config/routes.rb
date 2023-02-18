@@ -28,4 +28,5 @@ Rails.application.routes.draw do
 
   # get "rewards", to: "pages#rewards"
   resources :rewards, only: [:index]
+  get "update_avatar_url_user", to: "rewards#update_avatar_url_user"
 end

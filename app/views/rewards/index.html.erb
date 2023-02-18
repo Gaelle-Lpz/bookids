@@ -14,7 +14,7 @@
             <%= image_tag "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/avatar_lock_nwhmec.png", class:"navbar-avatar mb-2" %>
           <% end %>
           <!-- TODO add btn to change avatar to reward-->
-          <p class="bg-small bg-blue text-center">Use this reward</p>
+          <%= link_to "Use the reward", update_avatar_url_user_path(reward_id: reward.id)  %>
         </div>
       <% end %>
   </div>
