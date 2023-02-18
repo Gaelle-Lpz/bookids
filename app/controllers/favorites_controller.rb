@@ -2,13 +2,16 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @favorites = current_user.favorited_users
+
+    @favorites = current_user.all_favorited
   end
 
   def create
     @user = User.find(params[:user_id])
     current_user.favorite(@user)
-    redirect_to user_path(@user)
+
+    flash[:notice] = "Utilisateur ajouté en ami !"
+    redirect_to favorites_path
   end
 
   def destroy
@@ -17,9 +20,9 @@ class FavoritesController < ApplicationController
     redirect_to user_path(@user)
   end
 
-  def search
+  def search_user
     if params[:query].present?
-      @users = User.search_by_name(params[:query])
+      @users = User.user_search(params[:query])
     else
       @users = User.all
     end

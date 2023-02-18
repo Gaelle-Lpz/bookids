@@ -31,4 +31,5 @@ Rails.application.routes.draw do
 
   # favorite
   resources :favorites
+  get "search_user", to: "favorites#search_user"
 end
