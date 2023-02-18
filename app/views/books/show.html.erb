@@ -53,8 +53,9 @@
       <% end %>
     </div>
 
-
+    <% unless @user_book.nil? %>
     <%= link_to "Add a review", new_user_book_review_path(@user_book) %>
+    <%end %>
   </div>
 
 
