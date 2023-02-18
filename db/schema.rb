@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_18_102813) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -97,7 +96,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_18_102813) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "family_id"
-    t.integer "role"
     t.boolean "parent", default: false
     t.integer "total_score"
     t.string "user_name"
