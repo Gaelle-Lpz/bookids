@@ -25,6 +25,7 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
+    redirect_to books_path
   end
 
   def reading_list
