@@ -22,7 +22,7 @@
   <div class="navbar-user mb-3">
     <!-- TODO change to avatar user-->
     <%= link_to user_profil_path(current_user) do %>
-      <%= image_tag 'https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/no_avatar_fxdnx3.png', class:"navbar-avatar mb-3" %>
+      <%= image_tag current_user.avatar_url, class:"navbar-avatar mb-3" %>
     <% end %>
 
     <div class="navbar-score">
