@@ -1,5 +1,6 @@
 .container-margin-left {
   margin-left: 200px;
+  margin-right: 100px;
 }
 
 .show-top {
@@ -27,7 +28,8 @@
 }
 
 .el-center {
-  margin-right: auto;
+  width: 100%;
+  margin-right:  auto;
   margin-left: auto;
 }
 
@@ -70,7 +72,7 @@
 }
 
 .search-container {
-  margin: 32px;
+  margin: 16px 32px 32px 32px ;
 }
 
 .search-form {

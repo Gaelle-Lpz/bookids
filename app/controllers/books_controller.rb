@@ -41,7 +41,7 @@ class BooksController < ApplicationController
       @search_books = Book.book_search(params[:query])
       if @search_books.empty?
         @search_books = []
-        @books = GoogleBooks.search(params[:query], {:count => 3})
+        @books = GoogleBooks.search(params[:query], {:count => 10})
         @books.each do |book|
           @book = Book.new(name: book.title, description: book.description, author: book.authors, image: book.image_link, isbn: book.isbn, score: rand(10...100) )
           @book.save
