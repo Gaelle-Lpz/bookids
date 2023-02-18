@@ -1,0 +1,6 @@
+<div class="container container-margin-left">
+
+  <% @users.each do |user| %>
+    <%= link_to user.user_name, user_profil_path(user) %>
+  <% end %>
+</div>

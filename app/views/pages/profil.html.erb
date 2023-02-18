@@ -41,4 +41,11 @@
     <% end %>
   </div>
 
+  <% unless current_user == @user || current_user.favorited?(@user) %>
+    <%= button_to "Add to my Friends",
+     favorites_path(user_id: @user.id),
+     data: { turbo_method: :post } %>
+
+  <% end %>
+
 </div>
