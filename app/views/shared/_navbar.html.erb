@@ -8,7 +8,9 @@
 
   <div class="navbar-link">
     <!-- TODO add link-->
-    <i class="fa-solid fa-user-group"></i>
+    <%= link_to favorites_path do %>
+      <i class="fa-solid fa-user-group"></i>
+    <% end %>
 
     <%= link_to rewards_path do %>
       <i class="fa-solid fa-trophy"></i>

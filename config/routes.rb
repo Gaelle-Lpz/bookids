@@ -28,4 +28,7 @@ Rails.application.routes.draw do
 
   # get "rewards", to: "pages#rewards"
   resources :rewards, only: [:index]
+
+  # favorite
+  resources :favorites
 end

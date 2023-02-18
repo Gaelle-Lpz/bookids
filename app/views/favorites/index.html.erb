@@ -1,0 +1,12 @@
+<div class="container container-margin-left">
+
+  <%= form_tag(favorites_path, method: :get) do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Search an User" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
+  <% current_user.favorited_users.each do |favorite_user| %>
+    <%= link_to favorite_user.name, user_path(favorite_user) %>
+  <% end %>
+
+</div>
