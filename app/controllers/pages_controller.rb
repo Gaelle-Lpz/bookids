@@ -5,7 +5,19 @@ class PagesController < ApplicationController
   end
 
   def profil
-    
+
+  end
+
+  def children
+    @children = Family.find(current_user.family_id).users
+  end
+
+  def wish_validate
+    @children = Family.find(current_user.family_id).users
+  end
+
+  def read_validate
+    @children = Family.find(current_user.family_id).users
   end
 
 

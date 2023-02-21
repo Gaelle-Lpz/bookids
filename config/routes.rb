@@ -19,8 +19,11 @@ Rails.application.routes.draw do
   end
   resources :user_books, only: [:index] do
     resources :reviews
+    put :wish_validate, on: :member
+    put :read_validate, on: :member
   end
 
   # get "rewards", to: "pages#rewards"
   resources :rewards, only: [:index]
+  get "children", to: "pages#children"
 end

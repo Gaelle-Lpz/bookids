@@ -40,6 +40,13 @@ user4 = User.create!(
   family_id: family.id
 )
 
+user5 = User.create!(
+  email: "parent@lewagon.fr",
+  password: "lewagon",
+  family_id: family.id,
+  parent: true
+)
+
 # Create Book
   book1 = Book.create!(
   name: "Harry Potter t.1: L'école des sorciers",
@@ -147,7 +154,21 @@ user_book9 = UserBook.create!(
   wish_validate: true,
   read_validate: true
 )
+user_book10 = UserBook.create!(
+  user_id: user1.id,
+  book_id: book1.id,
+  status: 0,
+  wish_validate: false,
+  read_validate: false
+)
 
+user_book11 = UserBook.create!(
+  user_id: user1.id,
+  book_id: book3.id,
+  status: 0,
+  wish_validate: false,
+  read_validate: false
+)
 #reviews
 
 review1 = Review.create!(
