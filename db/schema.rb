@@ -96,7 +96,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_183903) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "family_id"
-    t.integer "role"
     t.boolean "parent", default: false
     t.integer "total_score", default: 0
     t.string "user_name"
