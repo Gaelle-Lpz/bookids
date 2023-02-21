@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   end
   resources :user_books, only: [:index] do
     resources :reviews
+    put :wish_validate, on: :member
+    put :read_validate, on: :member
   end
 
   # get "rewards", to: "pages#rewards"
@@ -34,5 +36,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index, :create]
   delete '/:id', to: 'favorites#destroy', as: 'favorite'
   get "search_user", to: "favorites#search_user"
+  
+  get "children", to: "pages#children"
 
 end
