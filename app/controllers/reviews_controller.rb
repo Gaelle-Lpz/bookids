@@ -1,15 +1,18 @@
 class ReviewsController < ApplicationController
-  before_action :set_book, only: [:new, :create]
-
   def new
     @review = Review.new
+    @user_book = UserBook.find(params[:user_book_id])
   end
 
   def create
     @review = Review.new(review_params)
-    @review.book = @book
-    @review.save
-    redirect_to book_path(@book)
+    @user_book = UserBook.find(params[:user_book_id])
+    @review.user_book = @user_book
+    if @review.save
+      redirect_to book_path(@user_book.book)
+    else
+      render "books/show"
+    end
   end
 
   private

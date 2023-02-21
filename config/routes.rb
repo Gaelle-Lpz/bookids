@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # users
+  get 'profil/:user_id', to: 'pages#profil', as: 'user_profil'
+
+  # books
   resources :books do
     resources :user_books, only: [:create, :update]
     collection do
@@ -25,5 +30,15 @@ Rails.application.routes.draw do
 
   # get "rewards", to: "pages#rewards"
   resources :rewards, only: [:index]
+<<<<<<< HEAD
   get "children", to: "pages#children"
+=======
+  get "update_avatar_url_user", to: "rewards#update_avatar_url_user"
+
+  # favorite
+  resources :favorites, only: [:index, :create]
+  delete '/:id', to: 'favorites#destroy', as: 'favorite'
+  get "search_user", to: "favorites#search_user"
+
+>>>>>>> b89b327aabb9796b4782cb7a7f90b24a824ef835
 end

@@ -51,9 +51,17 @@
       <% unless @user_book.nil? %>
        <%= button_to "Start Reading", book_user_book_path(@book, @user_book), method: :put, class:"btn-small btn-violet" %>
       <% end %>
+      <% unless @user_book.nil? %>
+    <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
+    <%end %>
+    <% unless @user_book.nil? %>
+    <%= link_to "Delete this book", book_path(@book), class:"btn-small btn-violet", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <%end %>
     </div>
 
   </div>
+
+
 
 <!----------------- DOWN ---------------->
 
