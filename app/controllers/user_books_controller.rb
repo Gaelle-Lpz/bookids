@@ -27,6 +27,11 @@ class UserBooksController < ApplicationController
   def read_validate
     @user_book = UserBook.find(params[:id])
     UserBook.update(@user_book.id, read_validate: true, status: 2)
+    @user = User.find(@user_book.user_id)
+    @book = Book.find(@user_book.book_id)
+    updated_total_score = @user.total_score + @book.score
+    User.update(@user.id, total_score: updated_total_score)
+
     redirect_to children_path
   end
 
