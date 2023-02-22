@@ -6,22 +6,31 @@
    <link rel="stylesheet" href="app/assets/stylesheets/pages/_home.scss">
    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inconsolata:wght@200;400&family=Lora&family=Nothing+You+Could+Do&family=Unica+One&family=Smooch+Sans:wght@600&display=swap" rel="stylesheet">
    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </head>
 <div id="container8">
    <body class='bg-home'>
       <div id='shelf'>
          <!-- START BOOKS LIBRARY -->
+         <% if user_signed_in? %>
+         <%= link_to books_path, class: "book-connect" do %>
+         <i class="fa-solid fa-book-open" style="transform: rotate(90deg);"></i>
+         BOOKIDS LIBRARY
+         <% end %>
+         <% else %>
          <%= link_to books_path, class: "book-connect" do %>
          <i class="fa-solid fa-book-open" style="transform: rotate(90deg);"></i>
          BOOKIDS CONNEXION
          <% end %>
+         <% end %>
+         <% if user_signed_in? %>
+         <%= link_to "BooKids Disconnexion", destroy_user_session_path, class: "book-signin", data: {turbo_method: :delete} %>
+         <% else %>
          <%= link_to new_user_registration_path, class: "book-signin" do %>
          <i class="fa-regular fa-book" style="transform: rotate(90deg);"></i>
          BOOKIDS inscription
          <% end %>
-          <!-- Provisory logout button -->
-         <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+         <% end %>
+         <!-- Social link Book -->
          <div class='book-bg graphic'>
             <div class='book flex-column'>
                <div id='book-shading'></div>
@@ -29,6 +38,22 @@
                   <i class="fa-brands fa-github-alt" style="transform: rotate(90deg);"></i>
                   Follow us
                </h1>
+               <div class='contents'>
+                  <div id='back'>
+                     <svg viewBox="0 0 512 512" width="100" title="chevron-circle-left">
+                        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+                     </svg>
+                  </div>
+                  <div class='page'>
+                     <div class='illus' style='background-image: url(https://webdevprojects23.com/bookids2/vectors/twitter_profile.png)'>
+                     </div>
+                  </div>
+                  <div class='page'>
+                     <div class='illus' style='background-image: url(https://webdevprojects23.com/bookids2/vectors/instagram_profile.png)'>
+                     </div>
+                  </div>
+                  <div id='page-shading'></div>
+               </div>
             </div>
          </div>
          <!-- BOOKIDS TEAM BOOK -->
@@ -52,8 +77,26 @@
                   </div>
                   <div class='page'>
                      <div>
-                        <h1>Bookids team</h1>
-                        <p class='text'>&emsp;Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application Bookids team has a pleasure to present the new kid application</p>
+                        <h1>The BooKids team</h1>
+                        <p class='text'>&emsp;Gaelle Lopez Jessica Coueron Shaherazade Bendjelloun Sebastien Sorrentino.</p>
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <img src="<%= asset_path('gaelle.png') %>" alt="Image 1">
+                              </div>
+                              <div class="col-md-6">
+                                 <img src="<%= asset_path('jessica.png') %>" alt="Image 1">
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <img src="<%= asset_path('shaherazade.png') %>" alt="Image 1">
+                              </div>
+                              <div class="col-md-6">
+                                 <img src="<%= asset_path('sebastien.png') %>" alt="Image 1">
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <div id='page-shading'></div>
@@ -77,8 +120,7 @@
                   </div>
                   <div class='page'>
                      <h1>Bookids Application V1</h1>
-                     <p class='text'>&emsp;BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS</p>
-                     <p class='text'>&emsp;BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS BOOKIDS</p>
+                     <p class='text'>&emsp;The BooKids team has a pleasure to present the new kid application. BooKids. The application to make children love reading ! Target: children approximately 8-14 years old and their parents of course. Pain: It is difficult for parents to get children and young adolescents to like reading.Solution: Make reading fun by allowing the child to gain experience and rewards (badge / possibility to customize his profile ...) like in a game. Originality: Exploit the fun and addictive mechanics of video games to anchor a positive habit in young people.
                   </div>
                   <div class='page'>
                      <div class='illus' style='background-image: url(https://images.unsplash.com/photo-1484415063229-3d6335668531?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1214&q=80)'>
@@ -91,6 +133,7 @@
       </div>
 </div>
 <img class="logo-home" src="https://webdevprojects23.com/bookids2/vectors/logo_transp.png" alt="BOOKIDS">
+
 <h1 class="slogan">With BOOKIDS, the more you read, the more you win !</h1>
 
 <!-- END BOOKS LIBRARY -->
