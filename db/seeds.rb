@@ -19,8 +19,8 @@ user1 = User.create!(
   email: "jessica@lewagon.fr",
   user_name: "Jessica",
   password: "lewagon",
-  total_score: 140,
-  family_id: family.id,
+  total_score: 1260,
+  family_id: family.id
 )
 
 user2 = User.create!(
@@ -28,7 +28,7 @@ user2 = User.create!(
   user_name: "Gaelle",
   password: "lewagon",
   family_id: family.id,
-  total_score: 120
+  total_score: 320
 )
 
 user3 = User.create!(
@@ -36,7 +36,7 @@ user3 = User.create!(
   user_name: "Sébastien",
   password: "lewagon",
   family_id: family.id,
-  total_score: 130
+  total_score: 230
 )
 
 user4 = User.create!(
@@ -44,7 +44,14 @@ user4 = User.create!(
   user_name: "Shaherazade",
   password: "lewagon",
   family_id: family.id,
-  total_score: 150
+  total_score: 670
+)
+
+user5 = User.create!(
+  email: "parent@lewagon.fr",
+  password: "lewagon",
+  family_id: family.id,
+  parent: true
 )
 
 # Create Book
@@ -154,7 +161,21 @@ user_book9 = UserBook.create!(
   wish_validate: true,
   read_validate: true
 )
+user_book10 = UserBook.create!(
+  user_id: user1.id,
+  book_id: book1.id,
+  status: 0,
+  wish_validate: false,
+  read_validate: false
+)
 
+user_book11 = UserBook.create!(
+  user_id: user1.id,
+  book_id: book3.id,
+  status: 0,
+  wish_validate: false,
+  read_validate: false
+)
 #reviews
 
 review1 = Review.create!(
@@ -202,74 +223,74 @@ review7 = Review.create!(
 #rewards
 
 reward1 = Reward.create(
-  name: "zombie",
-  required_score: 101,
+  name: "Zombie :",
+  required_score: 100,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/zombie_ixltpr.png"
 )
 
 reward2 = Reward.create(
-  name: "troll",
-  required_score: 110,
+  name: "Troll :",
+  required_score: 200,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/troll_w5oxkd.png"
 )
 
 reward3 = Reward.create(
-  name: "wizard",
-  required_score: 125,
+  name: "Wizard :",
+  required_score: 300,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797320/wizard_odums5.png"
 )
 
 reward4 = Reward.create(
-  name: "ninja",
-  required_score: 130,
+  name: "Ninja :",
+  required_score: 400,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/ninja_byvs9f.png"
 )
 
 reward5 = Reward.create(
-  name: "mutant",
-  required_score: 155,
+  name: "Mutant :",
+  required_score: 500,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/mutant_lukfky.png"
 )
 
 reward6 = Reward.create(
-  name: "unicorn",
-  required_score: 170,
+  name: "Unicorn :",
+  required_score: 600,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/unicorn_c4y1hx.png"
 )
 
 reward7 = Reward.create(
-  name: "pirate",
-  required_score: 200,
+  name: "Pirate :",
+  required_score: 700,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/pirate_liureq.png"
 )
 
 reward8 = Reward.create(
-  name: "knight",
-  required_score: 210,
+  name: "Knight :",
+  required_score: 800,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/knight_q8jaaa.png"
 )
 
 reward9 = Reward.create(
-  name: "alien",
-  required_score: 230,
+  name: "Alien :",
+  required_score: 900,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/alien_ugoa3v.png"
 )
 
 reward10 = Reward.create(
-  name: "elf",
-  required_score: 245,
+  name: "Elf :",
+  required_score: 1000,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/elf_etj8xh.png"
 )
 
 reward11 = Reward.create(
-  name: "fairy",
-  required_score: 250,
+  name: "Fairy :",
+  required_score: 1100,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/fairy_qbgz1e.png"
 )
 
 reward12 = Reward.create(
-  name: "dragon",
-  required_score: 300,
+  name: "Dragon :",
+  required_score: 1200,
   image: "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/dragon_zzxmwn.png"
 )
 

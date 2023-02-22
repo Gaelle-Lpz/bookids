@@ -1,0 +1,30 @@
+<div class="container container-margin-left">
+
+  <%=link_to books_path do %>
+    <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+  <% end %>
+
+  <div class="search-container">
+    <%= form_with url: search_user_path, method: :get, class: "el-center search-form d-flex"  do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a Friend"
+      %>
+      <%= submit_tag "Search", class: "btn-small btn-violet ms-3" %>
+    <% end %>
+  </div>
+
+  <div class="index-container"></div>
+
+  <h2 class="mt-3">My Friends :</h2>
+  <div class="ms-5 row">
+  <% @favorites.each do |favorite| %>
+    <div class="container-reward col m-3">
+      <%= image_tag favorite.avatar_url, class:"navbar-avatar mb-2" %>
+      <%= link_to favorite.user_name, user_profil_path(favorite), class: "btn-small btn-violet" %>
+    </div>
+  <% end %>
+  </div>
+
+</div>
