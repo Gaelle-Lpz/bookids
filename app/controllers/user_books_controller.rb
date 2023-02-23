@@ -20,7 +20,7 @@ class UserBooksController < ApplicationController
 
   def wish_validate
     @user_book = UserBook.find(params[:id])
-    UserBook.update(@user_book.id, wish_validate: true, status: 2)
+    UserBook.update(@user_book.id, wish_validate: true, status: 1)
     redirect_to children_path
   end
 
@@ -35,6 +35,10 @@ class UserBooksController < ApplicationController
     redirect_to children_path
   end
 
-
+  def mark_as_read
+    @user_book = UserBook.find(params[:id])
+    UserBook.update(@user_book.id, status: 2)
+    redirect_to reading_list_books_path
+  end
 end
   #creer methode user_book params

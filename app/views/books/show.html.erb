@@ -47,16 +47,18 @@
 
 
     <!-- TODO change to btn path according to the status-->
-      <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-small btn-violet" %>
-      <% unless @user_book.nil? %>
-       <%= button_to "Start Reading", book_user_book_path(@book, @user_book), method: :put, class:"btn-small btn-violet" %>
+      <% if  !@user_book.nil? && @user_book.status == 0 %>
+        <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-small btn-violet" %>
       <% end %>
-      <% unless @user_book.nil? %>
-    <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
-    <%end %>
-    <% unless @user_book.nil? %>
-    <%= link_to "Delete this book", book_path(@book), class:"btn-small btn-violet", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-    <%end %>
+      <% if !@user_book.nil? && @user_book.read_validate == true %>
+        <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
+      <%end %>
+      <% if !@user_book.nil? && @user_book.read_validate == false && @user_book.status == "pending" %>
+        <%= link_to "Mark as Read",  mark_as_read_user_book_path(@user_book),data: {turbo_method: :patch}, class:"btn-small btn-violet" %>
+      <%end %>
+      <% if !@user_book.nil? %>
+        <%= link_to "Delete this book", book_path(@book), class:"btn-small btn-violet", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <%end %>
     </div>
 
   </div>
