@@ -8,4 +8,10 @@ class Book < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def average_rating
+    avg_rating = 0.0
+    reviews.each { |review| avg_rating += review.rating / reviews.size }
+    return avg_rating
+  end
 end

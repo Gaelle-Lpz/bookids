@@ -1,37 +1,22 @@
 <div class="container container-margin-left">
 
+<!----------------- TOP ---------------->
   <div class="show-top">
-    <!----------------- LEFT ---------------->
+
+    <%= link_to books_path do %>
+      <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+    <% end %>
+
     <div class="show-left">
 
+      <p class="bg-big bg-blue el-center"><%= @book.name %></p>
 
-      <%= link_to books_path do %>
-        <i class="fas fa-arrow-alt-circle-left icon-back"></i>
-      <% end %>
+      <%= image_tag @book.image, class:"img-index" %>
 
-      <!-- TODO Change this to average rating book
-      <%# 5.times do |i| %>
-        <%# if i < @review.rating.floor %>
-          <i class="fas fa-star"></i>
-        <%# else %>
-          <i class="far fa-star"></i>
-        <%# end %>
-      <%# end %>
-      -->
+      <h3>DESCRIPTION:</h3>
+      <p class="bg-description"><%= @book.description %></p>
 
-      <%= image_tag @book.image, class:"img-book" %>
-
-      <div>
-        <h3>ISBN:</h3>
-        <p class="bg-small bg-yellow"><%= @book.isbn %></p>
-      </div>
-
-    </div>
-    <!----------------- RIGHT ---------------->
-    <div class="show-right">
-
-      <p class="bg-big bg-blue el-center mb-5"><%= @book.name %></p>
-      <div class="show-element">
+      <div class="show-element mb-3">
         <div>
           <h3>AUTHOR:</h3>
           <p class="bg-small bg-violet mb-3"><%= @book.author %></p>
@@ -40,37 +25,47 @@
           <h3>SCORE:</h3>
           <p class="bg-small bg-green mb-3"><%= @book.score %></p>
         </div>
+        <div>
+          <h3>ISBN:</h3>
+          <p class="bg-small bg-yellow"><%= @book.isbn %></p>
+        </div>
       </div>
 
-      <h3>DESCRIPTION:</h3>
-      <p class="bg-description"><%= @book.description %></p>
-
-
-    <!-- TODO change to btn path according to the status-->
-      <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-small btn-violet" %>
-      <% unless @user_book.nil? %>
-       <%= button_to "Start Reading", book_user_book_path(@book, @user_book), method: :put, class:"btn-small btn-violet" %>
-      <% end %>
-      <% unless @user_book.nil? %>
-    <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
-    <%end %>
-    <% unless @user_book.nil? %>
-    <%= link_to "Delete this book", book_path(@book), class:"btn-small btn-violet", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-    <%end %>
+      <div class="show-element">
+        <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-big btn-blue" %>
+        <% unless @user_book.nil? %>
+          <%= link_to "Delete this book", book_path(@book), class:"btn-big btn-orange", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        <%end %>
+      </div>
     </div>
 
+
+    <div class="show-right">
+      <p>
+        <% 5.times do |i| %>
+          <% if i < @book.average_rating.floor %>
+            <i class="fas fa-star big-star"></i>
+          <% else %>
+            <i class="far fa-star big-star"></i>
+          <% end %>
+        <% end %>
+      </p>
+
+      <% @book.reviews.each do |review| %>
+        <p class="container-review">
+          <%= link_to "#{review.user_book.user.user_name} : ", user_profil_path(review.user_book.user), class: "mb-2 btn-small btn-green" %>
+          <%= review.rating %><i class="far fa-star little-star"></i>
+          <%= review.comment %>
+        </p>
+      <% end %>
+
+      <% if @book.reviews == [] %>
+        <p>This book has no review. Read it quickly and give your opinion!</p>
+      <% end %>
+
+
+      <% unless @user_book.nil? %>
+        <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
+      <%end %>
+    </div>
   </div>
-
-
-
-<!----------------- DOWN ---------------->
-
-  <!-- TODO front to review -->
-  <div class="show-down">
-    <% @book.reviews.each do |review| %>
-      <li class="list-group-item"><%= review.comment %></li>
-      <li class="list-group-item"><%= review.rating %></li>
-    <% end %>
-  </div>
-
-</div>
