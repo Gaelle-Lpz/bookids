@@ -14,7 +14,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     current_user.unfavorite(@user)
     flash[:notice] = "User delete !"
     redirect_to favorites_path

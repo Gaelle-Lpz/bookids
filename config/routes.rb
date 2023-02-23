@@ -34,8 +34,7 @@ Rails.application.routes.draw do
   get "update_avatar_url_user", to: "rewards#update_avatar_url_user"
 
   # favorite
-  resources :favorites, only: [:index, :create]
-  delete '/:id', to: 'favorites#destroy', as: 'favorite'
+  resources :favorites
   get "search_user", to: "favorites#search_user"
 
   get "children", to: "pages#children"

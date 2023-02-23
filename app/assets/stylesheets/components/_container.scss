@@ -1,6 +1,6 @@
 .container-margin-left {
-  margin-left: 200px;
-  margin-right: 100px;
+  margin-left: 300px;
+  margin-right: 80px;
 }
 
 .show-top {
@@ -9,7 +9,8 @@
 }
 
 .show-left {
-  width: 50%;
+  margin-top: 32px;
+  width: 75%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,8 +24,11 @@
 }
 
 .show-right {
-  width: 50%;
-  text-align: center;
+  margin-top: 32px;
+  width: 25%;
+  border-left: 3px solid $bg-color;
+  padding: 32px;
+
 }
 
 .el-center {
@@ -96,4 +100,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.container-review {
+  border-bottom: 3px solid $bg-color;
 }
