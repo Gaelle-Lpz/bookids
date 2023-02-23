@@ -9,4 +9,8 @@ class PagesController < ApplicationController
     @reading_list_books = @user.user_books.pending.map{ |user_book| user_book.book }
     @wish_list_books = @user.user_books.wished.where(read_validate: false).map{ |user_book| user_book.book }
   end
+
+  def children
+    @children = Family.find(current_user.family_id).users
+  end
 end

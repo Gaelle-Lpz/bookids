@@ -32,7 +32,12 @@
       </div>
 
       <div class="show-element">
-        <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-big btn-blue" %>
+        <% if  !@user_book.nil? && @user_book.status == 0 %>
+          <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-big btn-blue" %>
+        <% end %>
+        <% if !@user_book.nil? && @user_book.read_validate == false && @user_book.status == "pending" %>
+          <%= link_to "Mark as Read",  mark_as_read_user_book_path(@user_book),data: {turbo_method: :patch}, class:"btn-big btn-blue" %>
+        <%end %>
         <% unless @user_book.nil? %>
           <%= link_to "Delete this book", book_path(@book), class:"btn-big btn-orange", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
         <%end %>
@@ -64,7 +69,7 @@
       <% end %>
 
 
-      <% unless @user_book.nil? %>
+      <% if !@user_book.nil? && @user_book.read_validate == true %>
         <%= link_to "Add a review", new_user_book_review_path(@user_book), class:"btn-small btn-violet" %>
       <%end %>
     </div>

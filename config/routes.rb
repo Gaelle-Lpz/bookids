@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   end
   resources :user_books, only: [:index] do
     resources :reviews
+    put :wish_validate, on: :member
+    put :read_validate, on: :member
+    patch :mark_as_read, on: :member
   end
 
   # get "rewards", to: "pages#rewards"
@@ -33,4 +36,7 @@ Rails.application.routes.draw do
   # favorite
   resources :favorites
   get "search_user", to: "favorites#search_user"
+
+  get "children", to: "pages#children"
+
 end
