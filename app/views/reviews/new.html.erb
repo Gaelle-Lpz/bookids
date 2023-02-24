@@ -1,16 +1,25 @@
-<div class="container-form8">
- <section>
-  <div class="container-form9">
-    <div class="col-12 col-md-10 offset-lg-1">
-<h5>Add your Review</h5>
-  <%= simple_form_for [@user_book, @review] do |f| %>
-  <%= f.label :comment %>
-  <%= f.text_field :comment %>
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
+<section>
+   <div class="container-form10">
+      <div class="container-form9">
+         <h1 class="add-review-title">Add your Review</h1>
+         <%= simple_form_for [@user_book, @review] do |f| %>
+         <%= f.label :comment %>
+         <%= f.text_field :comment %>
+         <%= f.label :rating %>
+         <%= f.text_field :rating %>
+         <%= f.submit class: 'btn btn-flat' %>
+         <% end %>
+         <div class="container-form11">
+            <h1 class="explain">Please help others BooKids users by rating this book with a note between 1.0 to 5.0 (rating form above)</h1>
+            <ul class="gold-points">
+               <li>1</li>
+               <li>2</li>
+               <li>3</li>
+               <li>4</li>
+               <li>5</li>
+            </ul>
+         </div>
       </div>
-	  </div>
- </section>
-</div>
+   </div>
+   </div>
+</section>
