@@ -33,7 +33,7 @@
 
 .el-center {
   width: 100%;
-  margin-right:  auto;
+  margin-right: auto;
   margin-left: auto;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .search-container {
-  margin: 16px 32px 32px 32px ;
+  margin: 16px 32px 32px 32px;
 }
 
 .search-form {
@@ -104,4 +104,139 @@
 
 .container-review {
   border-bottom: 3px solid $bg-color;
+}
+
+// Container for new review page
+
+.container-form11 {
+
+  width: 230px;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border-radius: 26px;
+  box-shadow: 1px 0 10px 15px rgba(0, 0, 0, .5);
+  transition: .5s;
+  margin-left: 0%;
+  margin-top: 15%;
+
+  /* Adding z index propertie to correct the problem of the desactivation of the form */
+  z-index: 1;
+}
+
+
+// Gold points animation for new review page
+
+.gold-points {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gold-points li {
+  position: relative;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gold-points li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: gold;
+  border-radius: 50%;
+  animation: gold-point 1s ease-in-out infinite;
+}
+
+@keyframes gold-point {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container-form9 {
+
+  width: 280px;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px;
+  border-radius: 26px;
+  box-shadow: 1px 0 10px 15px rgba(0, 0, 0, .5);
+  transition: .5s;
+  margin-left: 38%;
+  margin-top: 26%;
+
+  /* Adding z index propertie to correct the problem of the desactivation of the form */
+  z-index: 1;
+}
+
+.container-form10 {
+
+  background-image: url("https://webdevprojects23.com/bookids2/vectors/review-cloud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1350px;
+  height: 940px;
+  margin-left: 200px;
+  padding-top: 30px;
+  margin-top: -180px;
+}
+
+// Form animation (line)
+
+.container-form9::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid gold;
+  box-sizing: border-box;
+  animation: border-growth 2s linear forwards;
+  z-index: -1;
+}
+
+@keyframes border-growth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+    border-width: 10px;
+  }
+}
+
+// Rating text
+
+.explain {
+  padding-top: 5px;
+  font-size: medium;
+  color: $white;
+}
+
+// Add new review title
+
+.add-review-title {
+
+  color: $yellow;
+  font-size: x-large;
+  font-weight: 900;
+  text-align: center;
 }
