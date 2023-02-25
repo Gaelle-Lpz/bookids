@@ -3,9 +3,9 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     #define wish list and reading list
-    @reading_list_books = current_user.user_books.pending.map{ |user_book| user_book.book }
+    @reading_list_books = current_user.user_books.where(wish_validate: true, read_validate: false).map{ |user_book| user_book.book }
     @wish_list_books = current_user.user_books.wished.where(read_validate: false).map{ |user_book| user_book.book }
-
+    @read_book_list = current_user.user_books.where(read_validate: true).map{ |user_book| user_book.book }
   end
 
   def show
@@ -29,7 +29,11 @@ class BooksController < ApplicationController
   end
 
   def reading_list
-    @reading_list_books = current_user.user_books.where(wish_validate: true).map{ |user_book| user_book.book }
+    @reading_list_books = current_user.user_books.where(wish_validate: true, read_validate: false).map{ |user_book| user_book.book }
+  end
+
+  def read_book_list
+    @read_book_list = current_user.user_books.where(read_validate: true).map{ |user_book| user_book.book }
   end
 
   def wish_list
