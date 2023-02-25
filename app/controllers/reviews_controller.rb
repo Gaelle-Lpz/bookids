@@ -5,13 +5,17 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
     @user_book = UserBook.find(params[:user_book_id])
-    @review.user_book = @user_book
-    if @review.save
-      redirect_to book_path(@user_book.book)
+    if review_params[:rating] != "" && review_params[:comment]
+      @review = Review.new(review_params)
+      @review.user_book = @user_book
+      if @review.save
+        redirect_to book_path(@user_book.book)
+      else
+        render "books/show"
+      end
     else
-      render "books/show"
+      redirect_to new_user_book_review_path(@user_book.id)
     end
   end
 

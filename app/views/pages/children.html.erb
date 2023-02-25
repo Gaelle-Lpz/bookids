@@ -14,7 +14,7 @@
   <div>
     <% @children.where(parent:false).each do |child| %>
       <p><%=child.email%></p>
-      <%child.user_books.pending.where(read_validate: false).each do |user_book|%>
+      <% child.user_books.read.where(read_validate: false).each do |user_book|%>
         <p><%=user_book.book.name%></p>
         <%= button_to "Read Validate", read_validate_user_book_path(user_book), method: :put, class:"btn-small btn-violet" %>
 
