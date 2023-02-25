@@ -10,3 +10,12 @@
   border-radius: 0 10% 10% 0;
   margin: 32px 24px 24px 24px;
 }
+
+// Add pseudo 3D effect : inclinaison, zoom and translation on Y axis.
+// Gold border
+
+.img-index:hover {
+  transform: perspective(1000px) rotateY(30deg) scale(1.25) translateY(-16px);
+  border-color: gold;
+  border: 5px solid gold;
+}
