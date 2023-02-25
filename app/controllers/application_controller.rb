@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
       books_path
     end
   end
+
+  def default_url_options
+    { host: ENV["www.bookids.fun"] || "localhost:3000" }
+  end
 end
