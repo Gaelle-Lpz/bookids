@@ -26,7 +26,7 @@
       <h2>Want to read :</h2>
       <%= link_to "View All", wish_list_books_path, class:"btn-small btn-blue" %>
     </div>
-    <% @wish_list_books.each do |book| %>
+    <% @wish_list_books.take(5).reverse_each do |book| %>
       <%= link_to book_path(book) do %>
         <%= image_tag book.image, class:"img-index" %>
       <% end %>
@@ -43,7 +43,7 @@
       <h2>Currently reading :</h2>
       <%= link_to "View All", reading_list_books_path, class:"btn-small btn-blue" %>
     </div>
-      <% @reading_list_books.each do |book| %>
+      <% @reading_list_books.take(5).reverse_each do |book| %>
         <%= link_to book_path(book) do %>
           <%= image_tag book.image, class:"img-index" %>
         <% end %>
