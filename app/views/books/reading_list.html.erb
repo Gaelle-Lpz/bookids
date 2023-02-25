@@ -11,7 +11,7 @@
     <div class="container-book">
     <%= link_to book.name , book_path(book), class:"txt-book" %>
       <% if current_user.user_books.where(book: book).first.status == "read" && current_user.user_books.where(book: book).first.read_validate== false %>
-        <p class="bg-small bg-orange">Prending Reading Validation</p>
+        <p class="bg-small bg-orange">Pending Validation</p>
       <% elsif current_user.user_books.where(book: book).first.status == "read" && current_user.user_books.where(book: book).first.read_validate== true %>
         <p class="bg-small bg-violet">Book read</p>
       <% elsif current_user.user_books.where(book: book).first.status == "pending" %>

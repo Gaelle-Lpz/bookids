@@ -25,6 +25,19 @@
   padding: 8px;
 }
 
+.bg-modulable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 32px;
+  color: $txt-color;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
 // color BG
 
 .bg-orange {
