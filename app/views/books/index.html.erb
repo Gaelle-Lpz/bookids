@@ -54,4 +54,20 @@
       <% end %>
   </div>
 
+  <div class="index-container">
+    <div class="title-container">
+      <h2>Read Books :</h2>
+      <%= link_to "View All", read_book_list_books_path, class:"btn-small btn-blue" %>
+    </div>
+      <% @read_book_list.take(5).reverse_each do |book| %>
+        <%= link_to book_path(book) do %>
+          <%= image_tag book.image, class:"img-index" %>
+        <% end %>
+      <% end %>
+
+      <% if @read_book_list.empty? %>
+        <p>You don't have a book in your reading list. Ask your parents to validate the books on your wish list and start the fabulous adventure of reading</p>
+      <% end %>
+  </div>
+
 </div>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     collection do
       get :reading_list
       get :wish_list
+      get :read_book_list
       get :search
       get :search_theme
     end

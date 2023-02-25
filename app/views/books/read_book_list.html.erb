@@ -1,0 +1,18 @@
+<div class="container container-margin-left">
+
+
+  <%= link_to books_path do %>
+    <i class="fas fa-arrow-alt-circle-left icon-back"></i>
+  <% end %>
+
+  <h1 class="bg-big bg-blue el-center mb-5 el-center">My Read book List : </h1>
+
+  <% @read_book_list.each do |book| %>
+    <div class="container-book">
+    <%= link_to book.name , book_path(book), class:"txt-book" %>
+      <% if current_user.user_books.where(book: book).first.status == "read" && current_user.user_books.where(book: book).first.read_validate== true %>
+        <p class="bg-small bg-violet">Book read</p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
