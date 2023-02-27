@@ -186,41 +186,14 @@
 
 .container-form10 {
 
-  background-image: url("https://webdevprojects23.com/bookids2/vectors/review-cloud.png");
+  background: linear-gradient(90deg, rgba(16,13,191,0.37307422969187676) 3%, rgba(113,190,195,0.3562675070028011) 44%, rgba(221, 193, 7, 0.247) 83%);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1350px;
-  height: 940px;
+  min-height: 1350px;
+  max-height: 1240px;
   margin-left: 200px;
   padding-top: 30px;
   margin-top: -180px;
-}
-
-// Form animation (line)
-
-.container-form9::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  border-radius: 12px;
-  border: 2px solid gold;
-  box-sizing: border-box;
-  animation: border-growth 2s linear forwards;
-  z-index: -1;
-}
-
-@keyframes border-growth {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-    border-width: 10px;
-  }
 }
 
 // Rating text
@@ -228,14 +201,14 @@
 .explain {
   padding-top: 5px;
   font-size: medium;
-  color: $white;
+  color: $blue;
 }
 
 // Add new review title
 
 .add-review-title {
 
-  color: $yellow;
+  color: $blue;
   font-size: x-large;
   font-weight: 900;
   text-align: center;
