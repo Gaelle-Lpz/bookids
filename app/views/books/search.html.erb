@@ -11,8 +11,10 @@
         class: "form-control",
         placeholder: "Find a book"
       %>
-      <%= submit_tag "Search", class: "btn-small btn-violet ms-3" %>
+       <%= button_tag type: "submit", class: "btn-small btn-violet ms-3" do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
+  <% end %>
   </div>
 
   <h2 class="ms-3">Choose a Book :</h2>
