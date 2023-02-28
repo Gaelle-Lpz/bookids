@@ -11,7 +11,7 @@
 
       <p class="bg-modulable bg-blue el-center"><%= @book.name %></p>
 
-      <%= image_tag @book.image, class:"img-index" %>
+      <%= image_tag @book.image, class:"img-show" %>
 
       <h3>DESCRIPTION:</h3>
       <p class="bg-description"><%= @book.description %></p>
@@ -31,16 +31,20 @@
         </div>
       </div>
 
-      <div class="show-element">
+      <div class="show-element mb-4">
         <% if  @user_book.nil? %>
           <%= button_to "Wished Books", book_user_books_path(@book), method: :post, class:"btn-big btn-blue" %>
         <% end %>
         <% if !@user_book.nil? && @user_book.read_validate == false && @user_book.status == "pending" %>
           <%= link_to "Mark as Read",  mark_as_read_user_book_path(@user_book),data: {turbo_method: :patch}, class:"btn-big btn-blue" %>
         <%end %>
-        <% unless @user_book.nil? %>
-          <%= link_to "Delete this book", book_path(@book), class:"btn-big btn-orange", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-        <% end %>
+        <div class="delete-book mt-3">
+          <% unless @user_book.nil? %>
+            <%= link_to book_path(@book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-trash icon-trash"></i>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
 

@@ -23,9 +23,12 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>What I want to read :</h2>
-      <%= link_to "View All", wish_list_books_path, class:"btn-small btn-blue" %>
+      <h2> I want to read <span class="count-index">(<%= @wish_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
+      <%= link_to wish_list_books_path do %>
+        <i class="fa-regular fa-rectangle-list index-icon"></i>
+      <% end %>
     </div>
+
     <% @wish_list_books.take(5).reverse_each do |book| %>
       <%= link_to book_path(book) do %>
         <%= image_tag book.image, class:"img-index" %>
@@ -40,8 +43,10 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>What I'm currently reading :</h2>
-      <%= link_to "View All", reading_list_books_path, class:"btn-small btn-blue" %>
+      <h2>What I'm currently reading <span class="count-index">(<%= @reading_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
+      <%= link_to reading_list_books_path do %>
+        <i class="fa-regular fa-rectangle-list index-icon"></i>
+      <% end %>
     </div>
       <% @reading_list_books.take(5).reverse_each do |book| %>
         <%= link_to book_path(book) do %>
@@ -56,8 +61,10 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>What I've read :</h2>
-      <%= link_to "View All", read_book_list_books_path, class:"btn-small btn-blue" %>
+      <h2>What I've read <span class="count-index">(<%= @read_book_list.count %>  <i class="fa-solid fa-book"></i>)</span> :</h2>
+      <%= link_to read_book_list_books_path do %>
+        <i class="fa-regular fa-rectangle-list index-icon"></i>
+      <% end %>
     </div>
       <% @read_book_list.take(5).reverse_each do |book| %>
         <%= link_to book_path(book) do %>

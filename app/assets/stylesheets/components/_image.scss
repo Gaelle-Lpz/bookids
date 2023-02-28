@@ -6,7 +6,14 @@
 
 .img-index {
   width: 150px;
-  height: 150px;
+  height: 180px;
+  border-radius: 0 10% 10% 0;
+  margin: 32px 24px 24px 24px;
+}
+
+.img-show {
+  width: 170px;
+  height: 200px;
   border-radius: 0 10% 10% 0;
   margin: 32px 24px 24px 24px;
 }
@@ -15,7 +22,7 @@
 // Gold border
 
 .img-index:hover {
-  transform: perspective(1000px) rotateY(30deg) scale(1.25) translateY(-16px);
-  border-color: gold;
-  border: 5px solid gold;
+  transform: perspective(1000px) rotateY(-30deg) scale(1.25) translateY(-16px);
+  border-color: $dark-yellow;
+  border: 5px solid $dark-yellow;
 }
