@@ -8,9 +8,12 @@
         class: "form-control",
         placeholder: "Find a book"
       %>
-      <%= submit_tag "Search", class: "btn-small btn-violet ms-3" %>
+      <%= button_tag type: "submit", class: "btn-small btn-violet ms-3" do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
+  <% end %>
   </div>
+
   <div class="index-container">
     <div class= "category-container mb-3">
       <%= link_to "Adventure", search_theme_books_path(query: "Adventure"), class:"btn-small btn-yellow"  %>
