@@ -23,7 +23,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Want to read :</h2>
+      <h2>What I want to read :</h2>
       <%= link_to "View All", wish_list_books_path, class:"btn-small btn-blue" %>
     </div>
     <% @wish_list_books.take(5).reverse_each do |book| %>
@@ -40,7 +40,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Currently reading :</h2>
+      <h2>What I'm currently reading :</h2>
       <%= link_to "View All", reading_list_books_path, class:"btn-small btn-blue" %>
     </div>
       <% @reading_list_books.take(5).reverse_each do |book| %>
@@ -56,7 +56,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Read Books :</h2>
+      <h2>What I've read :</h2>
       <%= link_to "View All", read_book_list_books_path, class:"btn-small btn-blue" %>
     </div>
       <% @read_book_list.take(5).reverse_each do |book| %>
