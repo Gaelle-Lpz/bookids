@@ -1,17 +1,17 @@
 
 
-<div class="container container-margin-left">
+<div class="container container-margin-left" data-controller="confetti">
     <h1 class="el-center mt-5 bg-big bg-blue mb-3">Your Rewards</h1>
     <h2 class="text-center">Your score is <span class="txt-score"><%= @user_total_score %></span> points!</h2>
     <h4 class="text-center mb-2">Congratulations! Reading new books will earn you more points for even more rewards !</h4>
 
-  <div class="container-rewards row">
+  <div class="container-rewards row" >
       <% @rewards.each do |reward| %>
         <div class="container-reward col m-3 mb-5">
           <h2 class="mb-2 text-left"><%= reward.name %></h2>
           <% if @user_total_score > reward.required_score %>
             <%= image_tag reward.image, class:"navbar-avatar mb-2" %>
-            <%= link_to "Use the reward", update_avatar_url_user_path(reward_id: reward.id), class: "btn-small btn-blue"  %>
+            <%= link_to "Use the reward", update_avatar_url_user_path(reward_id: reward.id), class: "btn-small btn-blue", data: { action: "click->confetti#myConfetti" } %>
           <% else %>
             <%= image_tag "https://res.cloudinary.com/dotwftnzf/image/upload/v1675797319/avatar_lock_nwhmec.png", class:"navbar-avatar mb-2" %>
             <span class="bg-small bg-violet"> Lock !</span>
