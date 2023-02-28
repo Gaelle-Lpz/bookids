@@ -56,8 +56,8 @@ user5 = User.create!(
 
 # Create Book
   book1 = Book.create!(
-  name: "Harry Potter t.1: L'école des sorciers",
-  description: "Amitié, surprises, dangers, humour, Harry découvre ses pouvoirs et la vie à Poudlard. Le premier volume des aventures du jeune héros vous ensorcelle aussitôt !Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, une école de sorcellerie",
+  name: "Harry Potter, volume 1: Harry Potter and the Philosopher's Stone",
+  description: "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
   author: "J.K Rowling",
   image: "https://images.epagine.fr/628/9782070584628_1_75.jpg",
   isbn: "9782070584628",
@@ -65,29 +65,29 @@ user5 = User.create!(
 )
 
   book2 = Book.create!(
-  name:"Le Petit Prince",
-  description:"«J'ai ainsi vécu seul, sans personne avec qui parler véritablement, jusqu'à une panne dans le désert du Sahara, il y a six ans. Quelque chose s'était cassé dans mon moteur. Et comme je n'avais avec moi ni mécanicien, ni passagers, je me préparai à essayer de réussir, tout seul, une réparation difficile. C'était pour moi une question de vie ou de mort. J'avais à peine de l'eau à boire pour huit jours. Le premier soir je me suis donc endormi sur le sable à mille milles de toute terre habitée. J'étais bien plus isolé qu'un naufragé sur un radeau au milieu de l'océan. Alors vous imaginez ma surprise, au lever du jour, quand une drôle de petite voix m'a réveillé. Elle disait : ...»",
+  name:"The Little Prince",
+  description:"The Little Prince is a classic tale of equal appeal to children and adults. On one level it is the story of an airman's discovery, in the desert, of a small boy from another planet - the Little Prince of the title - and his stories of intergalactic travel, while on the other hand it is a thought-provoking allegory of the human condition.",
   author:"Antoine de Saint-Exupéry",
   image:"https://m.media-amazon.com/images/I/41B-d58s3GL._SY291_BO1,204,203,200_QL40_ML2_.jpg",
-  isbn:"2070667227",
+  isbn:"1853261580",
   score:20
 )
 
   book3 = Book.create!(
-  name:"Saute-grenouille",
-  description:"Grenouille pense être seule dans la forêt, ce qui est en fait loin d'être le cas. Mais tous ceux qu'elle rencontre veulent la dévorer. Saute Grenouille ! Une promenade sonore et mouvementée, tout en onomatopées, pour ravir les plus petits.",
+  name:"Snap",
+  description:"Tap, tap tap ...Frog thinks there's no one else in the forest, but you never know what's just around the corner ...Celebrated creator Anna Walker, invites us to hear with our eyes as we follow frog on a rollicking escapade in this pitch-perfect pre-school soundscape.",
   author:"Anna Walker",
   image:"https://images.epagine.fr/638/9791035205638_1_75.jpg",
-  isbn: "9782840644293",
+  isbn: "978-1957363240",
   score:15
 )
 
   book4 = Book.create!(
-  name:"Le Seigneur des Anneaux- Tome 1: La Fraternité de l'Anneau",
-  description:"Dans les vertes prairies du Comté, les Hobbits, ou Demi-hommes, vivaient en paix... Jusqu'au jour fatal où l'un d'entre eux, au cours de ses voyages, entra en possession de l'Anneau Unique aux immenses pouvoirs. Pour le reconquérir, Sauron, le seigneur Sombre, va déchaîner toutes les forces du Mal. Frodo, le Porteur de l'Anneau, Gandalf, le magicien, et leurs intrépides compagnons réussiront-ils à écarter la menace qui pèse sur la Terre du Milieu ?",
+  name:"The Lord of the Rings, The Fellowship of the Ring",
+  description:"The Fellowship of the Ring is the first of three volumes in The Lord of the Rings, an epic set in the fictional world of Middle-earth. The Lord of the Rings is an entity named Sauron, the Dark Lord, who long ago lost the One Ring that contains much of his power. His overriding desire is to reclaim the Ring and use it to enslave all of Middle-earth.The story of The Lord of the Rings begins with several events that take place in The Hobbit. While wandering lost in a deep cave, Bilbo Baggins, a Hobbit—one of a small, kindly race about half the size of Men—stumbles upon a ring and takes it back with him to the Shire, the part of Middle-earth that is the Hobbits’ home. All Bilbo knows of his ring is that wearing it causes him to become invisible. He is unaware that it is the One Ring, and is therefore oblivious to its significance and to the fact that Sauron has been searching for it.?",
   author:"J.R.R. Tolkien",
   image:"https://cdn.shopify.com/s/files/1/0474/9718/3388/products/I-Grande-16767-le-seigneur-des-anneaux-1-la-fraternite-de-l-anneau.net_487x700.jpg?v=1640040541",
-  isbn:"2070612880",
+  isbn:"0007525540",
   score: 100
 )
 

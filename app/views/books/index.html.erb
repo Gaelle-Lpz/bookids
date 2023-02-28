@@ -23,7 +23,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Want to read <span class="count-index">(<%= @wish_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
+      <h2> I want to read <span class="count-index">(<%= @wish_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
       <%= link_to wish_list_books_path do %>
         <i class="fa-regular fa-rectangle-list index-icon"></i>
       <% end %>
@@ -43,7 +43,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Currently reading <span class="count-index">(<%= @reading_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
+      <h2>What I'm currently reading <span class="count-index">(<%= @reading_list_books.count %>  <i class="fa-solid fa-book"></i>)</span> : </h2>
       <%= link_to reading_list_books_path do %>
         <i class="fa-regular fa-rectangle-list index-icon"></i>
       <% end %>
@@ -61,7 +61,7 @@
 
   <div class="index-container">
     <div class="title-container">
-      <h2>Read Books <span class="count-index">(<%= @read_book_list.count %>  <i class="fa-solid fa-book"></i>)</span> :</h2>
+      <h2>What I've read <span class="count-index">(<%= @read_book_list.count %>  <i class="fa-solid fa-book"></i>)</span> :</h2>
       <%= link_to read_book_list_books_path do %>
         <i class="fa-regular fa-rectangle-list index-icon"></i>
       <% end %>
