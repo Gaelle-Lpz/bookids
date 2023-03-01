@@ -4,13 +4,8 @@
   display: flex;
   justify-content: center;
   padding-top: 3rem;
-  background-image: url("bedroom5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -35%;
   height: 565px;
   padding-top: 50px;
-
 }
 
 /* BOOKS LIBRARY */
@@ -78,19 +73,6 @@
 }
 /* END BOOK WIDTHS */
 
-/* TITLE SHADOWS */
-.book h1,
-.book h2,
-.book h3,
-.book h4,
-.book h5 {
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
-}
-.web .book h1,
-h3 {
-  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.6);
-}
-/* END TITLE SHADOWS */
 
 /* BOOK ATTRIBUTES */
 .book {
@@ -117,14 +99,12 @@ h3 {
   background: linear-gradient(0.25turn, #3f87a6, #0f34d8, #3c86f6);
   font-family: "Unica One", cursive;
   color: darkorange;
-
 }
 
 /* DATA VISUALIZATION */
 
 .data .book {
   background: linear-gradient(0.25turn, #c6d17b, #dae179, #c6c661);
-  font-family: "Smooch Sans", sans-serif;
   color: rgb(221, 206, 206);
 }
 /* END DATA VISUALIZATION */
@@ -132,7 +112,6 @@ h3 {
 /* Bookids Team DESIGN */
 .landscape .book {
   background: linear-gradient(to right, #4facfe 0%, #00f2fe, #087dc6);
-  font-family: "Fredericka the Great", cursive;
   color: rgb(247, 229, 192);
 }
 /* END Bookids Team DESIGN */
@@ -141,7 +120,6 @@ h3 {
 
 .web .book {
   background: linear-gradient(to right, #b286c0 0%, #d361db, #d879c7);
-  font-family: "Inconsolata", monospace;
   color: #333;
 }
 /* END Bookids Application V1 */
@@ -154,6 +132,7 @@ h3 {
   width: 61rem;
   height: 32rem;
   margin-top: -22px;
+  margin-right: 300px;
   z-index: 10;
   border-top-width: 0;
 }
@@ -181,7 +160,6 @@ h3 {
   color: #333;
   -ms-writing-mode: lr-tb;
       writing-mode: horizontal-tb;
-  font-family: "$body-font", cursive;
 }
 .page {
   display: flex;
@@ -323,10 +301,9 @@ h3 {
 
 
 .container8 {
-  margin: 20px;
+  margin: 150px;
   width: 400px;
   height: 4px;
-  background-color: #f2560d;
   width: 500px;
   display: inline;
 }
@@ -335,7 +312,7 @@ h3 {
 // Logo home footer zone
 
 .logo-home {
-  width: 250px;
+  width: 400px;
   margin-left: 43%;
   margin-top: 1%;
 
@@ -344,7 +321,6 @@ h3 {
 .slogan {
   text-align: center;
   font-size: 30px;
-  background: -webkit-linear-gradient(109.6deg, rgb(219, 102, 7) 11.2%, rgb(50, 16, 186) 55.4%, rgb(246, 181, 2) 100.2%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -352,13 +328,6 @@ h3 {
 
 }
 
-// Linear gradient for the home footer zone
-
-.bg-home {
-
-  background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
-  background-attachment: fixed;
-}
 
 // Book Sign in
 
@@ -464,6 +433,11 @@ h3 {
   background-image: url('https://webdevprojects23.com/bookids2/vectors/bookmark-red3.png');
   background-size: cover;
   transform: translateX(-50%);
+}
 
-
+.middle-home {
+  display: flex;
+  background-color: $bg-color;
+  justify-content: space-around;
+  padding-top: 32px;
 }
