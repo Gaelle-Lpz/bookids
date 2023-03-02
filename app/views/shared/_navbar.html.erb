@@ -20,12 +20,16 @@
 
   <div class="navbar-user mb-3">
     <!-- TODO change to avatar user-->
-    <%= link_to user_profil_path(current_user) do %>
-      <%= image_tag current_user.avatar_url, class:"navbar-avatar mb-3" %>
+    <% if user_signed_in? %>
+      <%= link_to user_profil_path(current_user) do %>
+        <%= image_tag current_user.avatar_url, class:"navbar-avatar mb-3" %>
+      <% end %>
     <% end %>
 
     <div class="navbar-score">
+    <% if user_signed_in? %>
       <%="#{current_user.total_score} pts "%>
+    <% end %>
     </div>
   </div>
 </div>
