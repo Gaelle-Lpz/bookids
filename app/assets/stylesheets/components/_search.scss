@@ -1,0 +1,13 @@
+.search-bar {
+  border-radius: 20px;
+  border: 5px solid $txt-color;
+  color: $txt-color;
+  width: 500px;
+  padding: 0 16px 0 16px;
+}
+
+.search-bar:focus,
+.search-bar:active {
+  border: 5px solid $dark-violet;
+  outline: none;
+}
