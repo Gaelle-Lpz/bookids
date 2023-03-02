@@ -10,6 +10,7 @@ class RewardsController < ApplicationController
     current_user.save
 
     flash[:notice] = "Avatar updated with your reward ;)"
+    sleep 3
     redirect_to rewards_path
   end
 end
